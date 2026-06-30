@@ -14,6 +14,8 @@ export interface User {
   badges: string[];
   certificates: string[];
 
+  completedLessons: string[];
+
   createdAt: string;
   lastActiveAt: string;
 }

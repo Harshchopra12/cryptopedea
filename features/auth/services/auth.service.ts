@@ -78,6 +78,7 @@ export async function signUp(data: SignUpData): Promise<User> {
     activeModule: "foundation-module-1",
     badges: [],
     certificates: [],
+    completedLessons: [],
     createdAt: timestamp,
     lastActiveAt: timestamp,
   };
@@ -119,21 +120,26 @@ export async function login(data: LoginData): Promise<User> {
     throw new Error("The authenticated user's profile data is invalid.");
   }
 
-  return {
-    uid: userProfile.uid,
-    email: userProfile.email,
-    firstName: userProfile.firstName,
-    lastName: userProfile.lastName,
-    xp: userProfile.xp,
-    level: userProfile.level,
-    streak: userProfile.streak,
-    activePath: userProfile.activePath,
-    activeModule: userProfile.activeModule,
-    badges: userProfile.badges,
-    certificates: userProfile.certificates,
-    createdAt: userProfile.createdAt.toDate().toISOString(),
-    lastActiveAt: userProfile.lastActiveAt.toDate().toISOString(),
-  };
+return {
+  uid: userProfile.uid,
+  email: userProfile.email,
+  firstName: userProfile.firstName,
+  lastName: userProfile.lastName,
+
+  xp: userProfile.xp,
+  level: userProfile.level,
+  streak: userProfile.streak,
+
+  activePath: userProfile.activePath,
+  activeModule: userProfile.activeModule,
+
+  badges: userProfile.badges,
+  certificates: userProfile.certificates,
+  completedLessons: userProfile.completedLessons,
+
+  createdAt: userProfile.createdAt.toDate().toISOString(),
+  lastActiveAt: userProfile.lastActiveAt.toDate().toISOString(),
+};
 }
 
 export const authService: Pick<AuthService, "signUp" | "login"> = {

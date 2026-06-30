@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
-import { completeLesson } from "@/features/progress/services/progress.service";
+import { completeLesson } from "@/features/progress/services/progress.actions";
 import { useAuth } from "@/providers/auth-provider";
 
 interface CompleteLessonButtonProps {
@@ -12,15 +13,13 @@ interface CompleteLessonButtonProps {
 export default function CompleteLessonButton({
   lessonId,
 }: CompleteLessonButtonProps) {
-  const { user, loading, isAuthenticated } = useAuth();
+  const { user } = useAuth();
 
-  console.log("AUTH DEBUG", {
-    user,
-    loading,
-    isAuthenticated,
-  });
+  const router = useRouter();
 
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] =
+    useState(false);
+
   const [isCompleted, setIsCompleted] =
     useState(false);
 
@@ -40,6 +39,9 @@ export default function CompleteLessonButton({
       );
 
       setIsCompleted(true);
+
+      // Refresh all Server Components
+      router.refresh();
     } catch (error) {
       console.error(
         "COMPLETE LESSON ERROR:",
@@ -56,7 +58,7 @@ export default function CompleteLessonButton({
       disabled={
         isLoading || isCompleted
       }
-      className="mt-8 rounded-lg bg-white px-5 py-3 text-black disabled:opacity-50"
+      className="mt-8 rounded-lg bg-white px-5 py-3 text-black transition disabled:cursor-not-allowed disabled:opacity-50"
     >
       {isCompleted
         ? "Lesson Completed ✓"

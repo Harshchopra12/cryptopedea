@@ -53,6 +53,7 @@ function isUserProfileDocument(
     typeof data.activeModule === "string" &&
     isStringArray(data.badges) &&
     isStringArray(data.certificates) &&
+    isStringArray(data.completedLessons) &&
     data.createdAt instanceof Timestamp &&
     data.lastActiveAt instanceof Timestamp
   );
@@ -71,6 +72,7 @@ function toUser(profile: UserProfileDocument): User {
     activeModule: profile.activeModule,
     badges: profile.badges,
     certificates: profile.certificates,
+    completedLessons: profile.completedLessons,
     createdAt: profile.createdAt.toDate().toISOString(),
     lastActiveAt: profile.lastActiveAt.toDate().toISOString(),
   };
