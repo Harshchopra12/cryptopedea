@@ -3,11 +3,16 @@
 import { useState } from "react";
 
 import type { Quiz } from "../types/quiz.types";
+import {
+  evaluateQuiz,
+  type QuizResult as QuizResultType,
+} from "../utils/quiz-evaluator";
 
 import QuizHeader from "./quiz-header";
 import QuizNavigation from "./quiz-navigation";
 import QuizProgress from "./quiz-progress";
 import QuestionCard from "./question-card";
+import QuizResult from "./quiz-result";
 
 interface QuizContainerProps {
   quiz: Quiz;
@@ -19,11 +24,30 @@ export default function QuizContainer({
   const [currentQuestion, setCurrentQuestion] =
     useState(0);
 
+  const [answers, setAnswers] =
+    useState<Record<number, number>>(
+      {},
+    );
+
+  const [quizResult, setQuizResult] =
+    useState<QuizResultType | null>(
+      null,
+    );
+
   const totalQuestions =
     quiz.questions.length;
 
   const question =
     quiz.questions[currentQuestion];
+
+  function handleAnswerSelect(
+    answer: number,
+  ) {
+    setAnswers((previous) => ({
+      ...previous,
+      [currentQuestion]: answer,
+    }));
+  }
 
   function handleNext() {
     if (
@@ -42,6 +66,45 @@ export default function QuizContainer({
         (current) => current - 1,
       );
     }
+  }
+
+  function handleSubmit() {
+    const result =
+      evaluateQuiz(
+        quiz,
+        answers,
+      );
+
+    setQuizResult(result);
+  }
+
+  function handleRetry() {
+    setQuizResult(null);
+    setCurrentQuestion(0);
+    setAnswers({});
+  }
+
+  function handleContinue() {
+    console.log(
+      "Continue to next module",
+    );
+  }
+
+  if (quizResult) {
+    return (
+      <QuizResult
+        score={quizResult.score}
+        correctAnswers={
+          quizResult.correctAnswers
+        }
+        totalQuestions={
+          quizResult.totalQuestions
+        }
+        passed={quizResult.passed}
+        onRetry={handleRetry}
+        onContinue={handleContinue}
+      />
+    );
   }
 
   return (
@@ -67,6 +130,13 @@ export default function QuizContainer({
         questionNumber={
           currentQuestion + 1
         }
+        selectedAnswer={
+          answers[currentQuestion] ??
+          null
+        }
+        onAnswerSelect={
+          handleAnswerSelect
+        }
       />
 
       <QuizNavigation
@@ -77,10 +147,15 @@ export default function QuizContainer({
           currentQuestion <
           totalQuestions - 1
         }
+        isLastQuestion={
+          currentQuestion ===
+          totalQuestions - 1
+        }
         onPrevious={
           handlePrevious
         }
         onNext={handleNext}
+        onSubmit={handleSubmit}
       />
     </main>
   );
