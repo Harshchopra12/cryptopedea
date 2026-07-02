@@ -2,6 +2,9 @@
 
 import { useState } from "react";
 
+import { useAuth } from "@/providers/auth-provider";
+import { completeModule } from "@/features/progress/services/progress.actions";
+
 import type { Quiz } from "../types/quiz.types";
 import {
   evaluateQuiz,
@@ -21,6 +24,8 @@ interface QuizContainerProps {
 export default function QuizContainer({
   quiz,
 }: QuizContainerProps) {
+  const { user } = useAuth();
+
   const [currentQuestion, setCurrentQuestion] =
     useState(0);
 
@@ -68,12 +73,30 @@ export default function QuizContainer({
     }
   }
 
-  function handleSubmit() {
+  async function handleSubmit() {
     const result =
       evaluateQuiz(
         quiz,
         answers,
       );
+
+    if (
+      result.passed &&
+      user
+    ) {
+      try {
+        await completeModule(
+          user.uid,
+          quiz.moduleId,
+          quiz.xpReward,
+        );
+      } catch (error) {
+        console.error(
+          "MODULE COMPLETION ERROR:",
+          error,
+        );
+      }
+    }
 
     setQuizResult(result);
   }

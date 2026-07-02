@@ -5,15 +5,21 @@ import {
   getDoc,
 } from "firebase/firestore";
 
-import { getLessonsByModule } from "@/features/learn/services/learn.service";
+import {
+  getFoundationModules,
+  getLessonsByModule,
+} from "@/features/learn/services/learn.service";
 
 import type {
   LessonProgress,
   ModuleProgress,
 } from "../types/progress.types";
 
+import type { ModuleProgress as ModuleStatus } from "../types/module-progress.types";
+
 import { calculateProgress } from "../utils/progress-calculator";
 import { isLessonUnlocked } from "../utils/unlock-rules";
+import { isModuleUnlocked } from "../utils/moduleUnlock";
 
 export async function getCompletedLessons(
   uid: string,
@@ -34,6 +40,28 @@ export async function getCompletedLessons(
     data.completedLessons,
   )
     ? data.completedLessons
+    : [];
+}
+
+export async function getCompletedModules(
+  uid: string,
+): Promise<string[]> {
+  const snapshot = await getDoc(
+    doc(db, "users", uid),
+  );
+
+  if (!snapshot.exists()) {
+    throw new Error(
+      "User not found.",
+    );
+  }
+
+  const data = snapshot.data();
+
+  return Array.isArray(
+    data.completedModules,
+  )
+    ? data.completedModules
     : [];
 }
 
@@ -93,4 +121,38 @@ export async function getModuleProgress(
 
     lessons: lessonProgress,
   };
+}
+
+export async function getFoundationModuleProgress(
+  uid: string,
+): Promise<ModuleStatus[]> {
+  const modules =
+    await getFoundationModules();
+
+  const completedModuleIds =
+    await getCompletedModules(uid);
+
+  const completedModuleOrders =
+    modules
+      .filter((module) =>
+        completedModuleIds.includes(
+          module.id ?? "",
+        ),
+      )
+      .map((module) => module.order);
+
+  return modules.map((module) => ({
+    module,
+
+    completed:
+      completedModuleIds.includes(
+        module.id ?? "",
+      ),
+
+    unlocked:
+      isModuleUnlocked(
+        module.order,
+        completedModuleOrders,
+      ),
+  }));
 }
