@@ -3,6 +3,7 @@
 import DashboardHeader from "@/components/dashboard/dashboard-header";
 import DashboardSidebar from "@/components/dashboard/dashboard-sidebar";
 import StatCard from "@/components/dashboard/stat-card";
+import LuluCompanion from "@/features/lulu/components/lulu-companion";
 import { useAuth } from "@/providers/auth-provider";
 
 export default function DashboardPage() {
@@ -33,6 +34,10 @@ export default function DashboardPage() {
           firstName={user.firstName}
           activePath={user.activePath}
         />
+
+        <div className="mt-6">
+          <LuluCompanion />
+        </div>
 
         <div className="mt-8 grid grid-cols-3 gap-4">
           <StatCard

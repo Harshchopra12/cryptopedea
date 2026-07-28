@@ -1,5 +1,7 @@
 import { db } from "@/lib/firebase/firebase";
 import { getFoundationModules } from "@/features/learn/services/learn.service";
+import { publishEvent } from "@/features/core/events/publisher";
+import { LULU_EVENTS } from "@/features/core/events/event.types";
 
 import {
   arrayUnion,
@@ -71,6 +73,15 @@ export async function completeLesson(
   });
 
   await awardXP(uid, 20);
+
+  publishEvent(
+    LULU_EVENTS.LESSON_COMPLETED,
+    {
+      lessonId,
+      moduleId: "unknown",
+      xpAwarded: 20,
+    },
+  );
 }
 
 export async function completeModule(
