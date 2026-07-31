@@ -1,0 +1,9 @@
+.cp-navbar-dark {
+  height: var(--cp-navbar-height);
+
+  background: var(--cp-color-primary);
+
+  color: var(--cp-color-white);
+
+  border-color: var(--cp-color-primary);
+}

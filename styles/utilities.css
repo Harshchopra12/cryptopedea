@@ -1,0 +1,23 @@
+/* ==========================================================================
+   Utility Classes
+   ========================================================================== */
+
+/* Future reusable helper classes will live here. */
+.cp-grid-background {
+   background-image:
+      repeating-linear-gradient(to right,
+         var(--cp-grid-line-color) 0,
+         var(--cp-grid-line-color) var(--cp-grid-line-width),
+         transparent var(--cp-grid-line-width),
+         transparent var(--cp-grid-size)),
+      repeating-linear-gradient(to bottom,
+         var(--cp-grid-line-color) 0,
+         var(--cp-grid-line-color) var(--cp-grid-line-width),
+         transparent var(--cp-grid-line-width),
+         transparent var(--cp-grid-size));
+
+   background-position:
+      var(--cp-grid-offset) var(--cp-grid-offset);
+
+   background-repeat: repeat;
+}

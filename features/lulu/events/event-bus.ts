@@ -1,6 +1,6 @@
 import type {
   LuluEvent,
-} from "../types/lulu-event.types";
+} from "@/features/core/events/event.types";
 
 type EventPayload = Record<
   string,
