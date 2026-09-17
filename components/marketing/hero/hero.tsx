@@ -1,13 +1,25 @@
-import GridBackground from "./grid-background";
+import Section from "@/components/ui/section";
+
+
+import { HERO_DIMENSIONS } from "./hero.constants";
+import HeroContent from "./hero-content";
+import HeroDecorations from "./hero-decorations";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[900px] overflow-hidden bg-[var(--cp-background)]">
-      <GridBackground />
+    <Section
+      className={`
+        relative
+        ${HERO_DIMENSIONS.MIN_HEIGHT_CLASSNAME}
+        overflow-hidden
+      `}
+    >
 
-      {/* Hero content will go here */}
 
-      <div className="relative z-10" />
-    </section>
+      <div className="relative z-10">
+        <HeroDecorations />
+        <HeroContent />
+      </div>
+    </Section>
   );
 }

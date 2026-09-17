@@ -1,54 +1,28 @@
-.cp-navbar-dark {
-  height: var(--cp-navbar-height);
-
-  background: var(--cp-color-primary);
-
-  color: var(--cp-color-white);
-
-  border-color: var(--cp-color-primary);
-}
-
 .cp-grid-background {
-  background-image:
-    linear-gradient(to right,
-      var(--cp-grid-line-color) var(--cp-grid-line-width),
-      transparent var(--cp-grid-line-width)),
-    linear-gradient(to bottom,
-      var(--cp-grid-line-color) var(--cp-grid-line-width),
-      transparent var(--cp-grid-line-width));
-
-  background-size: var(--cp-grid-size) var(--cp-grid-size);
-
-  background-position:
-    var(--cp-grid-offset) var(--cp-grid-offset);
-
-  width: 100%;
-  height: 100%;
-}
-
-/* ==========================================================================
-   Marketing Grid Background
-   ========================================================================== */
-
-.cp-grid-background {
-  position: absolute;
+  position: fixed;
   inset: 0;
+  z-index: 1;
   pointer-events: none;
-  z-index: 0;
 
   background-image:
-    linear-gradient(to right,
+    repeating-linear-gradient(
+      to right,
+      var(--cp-grid-line-color) 0,
       var(--cp-grid-line-color) var(--cp-grid-line-width),
-      transparent var(--cp-grid-line-width)),
-    linear-gradient(to bottom,
+      transparent var(--cp-grid-line-width),
+      transparent var(--cp-grid-size)
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--cp-grid-line-color) 0,
       var(--cp-grid-line-color) var(--cp-grid-line-width),
-      transparent var(--cp-grid-line-width));
-
-  background-size:
-    var(--cp-grid-size) var(--cp-grid-size);
+      transparent var(--cp-grid-line-width),
+      transparent var(--cp-grid-size)
+    );
 
   background-position:
-    var(--cp-grid-offset) var(--cp-grid-offset);
+    var(--cp-grid-offset)
+    var(--cp-grid-offset);
 
   background-repeat: repeat;
 }

@@ -121,15 +121,14 @@
    Marketing Grid
 -------------------------------------------------------------------------- */
 
+
+
    --cp-grid-size: 30px;
+
    --cp-grid-offset: 10px;
+
    --cp-grid-line-width: 1px;
 
-   /*
- * Temporary debug color.
- * We'll replace this with the exact Figma value once the
- * complete background is implemented.
- */
    --cp-grid-line-color: rgba(0, 9, 38, 0.06);
 
    /* --------------------------------------------------------------------------

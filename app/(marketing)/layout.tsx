@@ -1,15 +1,15 @@
-import type { ReactNode } from "react";
+import { Navbar } from "@/components/marketing/navbar";
 
-interface MarketingLayoutProps {
-    children: ReactNode;
-}
 
 export default function MarketingLayout({
-    children,
-}: MarketingLayoutProps) {
-    return (
-        <main className="relative min-h-screen overflow-x-hidden bg-white">
-            {children}
-        </main>
-    );
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <>
+      <Navbar />
+      {children}
+    </>
+  );
 }

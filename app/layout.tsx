@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
+import GridBackgroundWrapper from "@/components/layout/grid-background-wrapper";
 import localFont from "next/font/local";
 
 import "./globals.css";
@@ -86,7 +87,11 @@ export default function RootLayout({
       <body
         className={`${spaceGrotesk.className} min-h-screen bg-[var(--cp-background)] text-[var(--cp-foreground)] antialiased`}
       >
-        <AuthProvider>{children}</AuthProvider>
+        <GridBackgroundWrapper />
+
+        <AuthProvider>
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );
