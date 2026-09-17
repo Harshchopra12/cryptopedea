@@ -1,15 +1,22 @@
 import { Navbar } from "@/components/marketing/navbar";
-
+import MobileNavbar from "@/components/marketing/mobile/navbar";
 
 export default function MarketingLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode;
+    children: React.ReactNode;
 }) {
-  return (
-    <>
-      <Navbar />
-      {children}
-    </>
-  );
+    return (
+        <>
+            <div className="hidden md:block">
+                <Navbar />
+            </div>
+
+            <div className="block md:hidden">
+                <MobileNavbar />
+            </div>
+
+            {children}
+        </>
+    );
 }
