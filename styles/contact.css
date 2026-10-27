@@ -1,0 +1,515 @@
+/* =========================================================
+   CRYPTOPEDEA CONTACT PAGE
+   ========================================================= */
+
+.cp-contact-page {
+  position: relative;
+  z-index: 10;
+
+  width: 100%;
+  min-height: 100vh;
+
+  box-sizing: border-box;
+
+  color: #000926;
+}
+
+
+/* =========================================================
+   CONTACT CONTENT
+   ========================================================= */
+
+.cp-contact-content {
+  position: relative;
+  z-index: 10;
+
+  width: 1200px;
+  max-width: calc(100% - 40px);
+
+  margin: 80px auto 0;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 80px;
+
+  padding: 10px;
+}
+
+
+/* =========================================================
+   CONTACT FORM CARD
+
+   Figma:
+   Width: 1200px
+   Padding:
+   Top: 40px
+   Right: 30px
+   Bottom: 40px
+   Left: 30px
+
+   Border: 5px
+   Shadow: 10px
+   ========================================================= */
+
+.cp-contact-form-card {
+  position: relative;
+  z-index: 10;
+
+  width: 100%;
+  min-height: 655px;
+
+  box-sizing: border-box;
+
+  padding: 40px 30px;
+
+  background: #ff5c5d;
+
+  border: 5px solid #000000;
+
+  box-shadow: 10px 10px 0 #000000;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================================================
+   CONTACT TITLE
+
+   Figma:
+   Font: Space Grotesk
+   Size: 32px
+   Weight: 700
+   Line height: 125%
+   ========================================================= */
+
+.cp-contact-form-card h1 {
+  width: 100%;
+
+  margin: 0 0 25px;
+  padding: 0;
+
+  color: #000926;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 32px;
+  font-weight: 700;
+
+  line-height: 40px;
+
+  letter-spacing: -0.96px;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.cp-contact-form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+
+/* =========================================================
+   FIELD
+   ========================================================= */
+
+.cp-contact-field {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.cp-contact-field label {
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  color: #000926;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 24px;
+  font-weight: 400;
+
+  line-height: 30px;
+
+  letter-spacing: -0.72px;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.cp-contact-field input,
+.cp-contact-field textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border: 3px solid #000000;
+
+  border-radius: 0;
+
+  background: #ffffff;
+
+  color: #000926;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 20px;
+  font-weight: 400;
+
+  outline: none;
+
+  box-shadow: 4px 4px 0 #000926;
+}
+
+
+/* Name + Email */
+
+.cp-contact-field input {
+  height: 50px;
+
+  padding: 8px 12px;
+}
+
+
+/* Message */
+
+.cp-contact-field textarea {
+  min-height: 180px;
+
+  padding: 10px 12px;
+
+  resize: vertical;
+
+  line-height: 30px;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.cp-contact-field input:focus,
+.cp-contact-field textarea:focus {
+  outline: none;
+
+  border-color: #000926;
+
+  box-shadow: 5px 5px 0 #000926;
+}
+
+
+/* =========================================================
+   MESSAGE FIELD
+   ========================================================= */
+
+.cp-contact-message {
+  margin-top: 0;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
+
+.cp-contact-submit {
+  align-self: flex-start;
+
+  margin-top: 10px;
+
+  min-width: 90px;
+  height: 45px;
+
+  padding: 0 14px;
+
+  box-sizing: border-box;
+
+  border: 3px solid #000000;
+
+  border-radius: 0;
+
+  background: #ffffff;
+
+  color: #000926;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 18px;
+  font-weight: 400;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  box-shadow: 5px 5px 0 #000000;
+}
+
+
+.cp-contact-submit:hover {
+  transform: translate(2px, 2px);
+
+  box-shadow: 3px 3px 0 #000000;
+}
+
+
+.cp-contact-submit:active {
+  transform: translate(5px, 5px);
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   EMAIL CARD
+
+   Figma:
+   Width: 735px
+   Height: 255px
+   Padding:
+   Top/Bottom: 40px
+   Left/Right: 30px
+
+   Border: 5px
+   Shadow: 10px
+   ========================================================= */
+
+.cp-email-card {
+  position: relative;
+  z-index: 10;
+
+  width: 735px;
+  min-height: 255px;
+
+  box-sizing: border-box;
+
+  padding: 40px 30px;
+
+  background: #2bbcff;
+
+  border: 5px solid #000000;
+
+  box-shadow: 10px 10px 0 #000000;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+
+/* =========================================================
+   EMAIL TITLE
+   ========================================================= */
+
+.cp-email-card h2 {
+  margin: 0 0 10px;
+  padding: 0;
+
+  color: #000926;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 32px;
+  font-weight: 700;
+
+  line-height: 40px;
+
+  letter-spacing: -0.96px;
+}
+
+
+/* =========================================================
+   EMAIL DESCRIPTION
+   ========================================================= */
+
+.cp-email-card p {
+  margin: 0 0 20px;
+  padding: 0;
+
+  color: #000926;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 24px;
+  font-weight: 400;
+
+  line-height: 30px;
+
+  letter-spacing: -0.72px;
+}
+
+
+/* =========================================================
+   EMAIL ADDRESS
+   ========================================================= */
+
+.cp-email-address {
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 40px;
+
+  padding: 5px 10px;
+
+  box-sizing: border-box;
+
+  border: 3px solid #000000;
+
+  background: #ffffff;
+
+  color: #000926;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 20px;
+  font-weight: 400;
+
+  line-height: 30px;
+
+  text-decoration: none;
+
+  box-shadow: 4px 4px 0 #000926;
+}
+
+
+.cp-email-address:hover {
+  transform: translate(2px, 2px);
+
+  box-shadow: 2px 2px 0 #000926;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1240px) {
+
+  .cp-contact-content {
+    width: calc(100% - 40px);
+
+    max-width: none;
+  }
+
+  .cp-email-card {
+    width: 735px;
+
+    max-width: 100%;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .cp-contact-content {
+    width: calc(100% - 32px);
+
+    margin-top: 50px;
+
+    padding: 0;
+
+    gap: 60px;
+  }
+
+
+  .cp-contact-form-card {
+    min-height: auto;
+
+    padding: 30px 20px;
+
+    border-width: 4px;
+
+    box-shadow: 7px 7px 0 #000000;
+  }
+
+
+  .cp-contact-form-card h1 {
+    font-size: 28px;
+
+    line-height: 35px;
+
+    margin-bottom: 25px;
+  }
+
+
+  .cp-contact-field label {
+    font-size: 20px;
+
+    line-height: 25px;
+  }
+
+
+  .cp-contact-field input {
+    height: 48px;
+  }
+
+
+  .cp-contact-field textarea {
+    min-height: 160px;
+  }
+
+
+  .cp-email-card {
+    width: 100%;
+
+    min-height: auto;
+
+    padding: 30px 20px;
+
+    border-width: 4px;
+
+    box-shadow: 7px 7px 0 #000000;
+  }
+
+
+  .cp-email-card h2 {
+    font-size: 28px;
+
+    line-height: 35px;
+  }
+
+
+  .cp-email-card p {
+    font-size: 18px;
+
+    line-height: 25px;
+  }
+
+
+  .cp-email-address {
+    max-width: 100%;
+
+    overflow-wrap: anywhere;
+
+    font-size: 16px;
+  }
+}

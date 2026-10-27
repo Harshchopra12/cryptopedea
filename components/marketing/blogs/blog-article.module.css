@@ -1,0 +1,483 @@
+.page {
+  width: 100%;
+  padding: 70px 20px 65px;
+  color: #000926;
+}
+
+.article {
+  display: flex;
+  width: min(1204px, 100%);
+  margin-inline: auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleBanner {
+  display: flex;
+  width: 100%;
+  min-height: 80px;
+  align-items: center;
+  padding: 20px 30px;
+  border: 5px solid #000;
+  background: #2bbcff;
+  box-shadow: 5px 5px 0 #000;
+}
+
+.titleBanner h1 {
+  width: 100%;
+  margin: 0;
+  font-family: var(--cp-font-body), sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.96px;
+}
+
+.content {
+  display: flex;
+  width: calc(100% - 104px);
+  margin-top: 80px;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.illustration {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+.illustration img {
+  object-fit: contain;
+}
+
+.hero {
+  height: 500px;
+  border: 2px solid #000;
+  box-shadow: 5px 5px 0 #000;
+}
+
+.hero img {
+  object-fit: cover;
+}
+
+.blockchainHero img {
+  object-position: top;
+}
+
+.blockchainWorkHero img {
+  object-position: top;
+}
+
+.summary,
+.paragraphs {
+  width: 100%;
+  font-family: var(--cp-font-body), sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -0.72px;
+  text-align: justify;
+}
+
+.summary p,
+.paragraphs p {
+  margin: 0;
+  white-space: pre-line;
+}
+
+.paragraphs p + p {
+  margin-top: 20px;
+}
+
+.summary strong,
+.paragraphs strong {
+  font-weight: 700;
+}
+
+.section {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.section h2 {
+  width: 100%;
+  margin: 0 0 30px;
+  font-family: var(--cp-font-body), sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.96px;
+}
+
+.exchangeIllustration {
+  height: 553px;
+  margin-top: 50px;
+}
+
+.flowIllustration {
+  height: 350px;
+  margin-top: 50px;
+}
+
+.flowIllustration img {
+  top: -39.54% !important;
+  height: 315.14% !important;
+}
+
+.fiatFlowIllustration {
+  height: 350px;
+  margin-top: 50px;
+}
+
+.fiatFlowIllustration img {
+  top: -25.48% !important;
+  height: 315.14% !important;
+}
+
+.cryptoFlowIllustration {
+  height: 350px;
+  margin-top: 50px;
+}
+
+.cryptoFlowIllustration img {
+  object-fit: cover;
+}
+
+.blockchainWorkFlowIllustration {
+  height: 350px;
+  margin-top: 50px;
+}
+
+.blockchainWorkFlowIllustration img {
+  top: -33.79% !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: 23.41% !important;
+  width: 53.18% !important;
+  height: 167.58% !important;
+  object-fit: fill;
+}
+
+.bitcoinWorkFlowIllustration,
+.cryptoWalletFlowIllustration,
+.keysFlowIllustration,
+.cryptoTradingFlowIllustration {
+  height: 350px;
+  margin-top: 50px;
+}
+
+.bitcoinWorkFlowIllustration img,
+.cryptoWalletFlowIllustration img,
+.keysFlowIllustration img {
+  right: auto !important;
+  bottom: auto !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 315.14% !important;
+  object-fit: fill;
+}
+
+.bitcoinWorkFlowIllustration img {
+  top: -176.28% !important;
+}
+
+.cryptoWalletFlowIllustration img {
+  top: -200.77% !important;
+}
+
+.keysFlowIllustration img {
+  top: -149.2% !important;
+}
+
+.keysHero img {
+  top: -11.88% !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 123.75% !important;
+  object-fit: fill;
+}
+
+.cryptoTradingFlowIllustration img {
+  top: -33.29% !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: 23.57% !important;
+  width: 52.86% !important;
+  height: 166.58% !important;
+  object-fit: fill;
+}
+
+.related {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.related > h2 {
+  margin: 0 10px 25px;
+  font-family: var(--cp-font-body), sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -1.2px;
+}
+
+.relatedGrid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 10px;
+}
+
+.relatedCard {
+  display: flex;
+  width: 350px;
+  flex: 0 1 350px;
+  flex-direction: column;
+  gap: 29px;
+  padding: 20px;
+  border: 4px solid #000926;
+  box-shadow: 5px 5px 0 #000;
+}
+
+.relatedImage {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  flex: 0 0 200px;
+  overflow: hidden;
+  border: 2px solid #000926;
+  background: #fbfbfb;
+}
+
+.relatedImage img {
+  object-fit: cover;
+}
+
+.relatedCard h3 {
+  width: 100%;
+  margin: 0;
+  color: #fbfbfb;
+  font-family: var(--cp-font-body), sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.84px;
+  overflow-wrap: anywhere;
+}
+
+.goDeeper {
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+}
+
+.goDeeper h2,
+.goDeeper p {
+  margin: 0;
+  font-family: var(--cp-font-body), sans-serif;
+  font-size: 40px;
+  line-height: 1.25;
+  letter-spacing: -1.2px;
+}
+
+.goDeeper h2 {
+  font-weight: 700;
+}
+
+.goDeeper p {
+  font-weight: 400;
+}
+
+.lessonLink {
+  display: inline-flex;
+  min-height: 62px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border: 2px solid #000926;
+  background: #abef06;
+  box-shadow: 5px 5px 0 #000;
+  color: #000926;
+  font-family: var(--cp-font-display), sans-serif;
+  font-size: 28px;
+  line-height: 1.5;
+  letter-spacing: -0.84px;
+  text-decoration: none;
+}
+
+.lessonLink:focus-visible,
+.lessonLink:hover {
+  outline: 2px solid #000926;
+  outline-offset: 4px;
+}
+
+@media (max-width: 1239px) {
+  .content {
+    width: calc(100% - 40px);
+  }
+
+  .relatedGrid {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .relatedCard {
+    flex: 1 1 280px;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 767px) {
+  .page {
+    padding: 32px 20px 48px;
+  }
+
+  .titleBanner {
+    min-height: 64px;
+    padding: 14px 16px;
+    border-width: 3px;
+  }
+
+  .titleBanner h1 {
+    font-size: clamp(22px, 6vw, 28px);
+    letter-spacing: -0.6px;
+  }
+
+  .content {
+    width: 100%;
+    margin-top: 40px;
+    gap: 32px;
+  }
+
+  .hero {
+    height: auto;
+    aspect-ratio: 2.2 / 1;
+  }
+
+  .summary,
+  .paragraphs {
+    font-size: 18px;
+    line-height: 1.45;
+    letter-spacing: -0.36px;
+  }
+
+  .paragraphs p + p {
+    margin-top: 16px;
+  }
+
+  .section h2 {
+    margin-bottom: 18px;
+    font-size: 24px;
+    letter-spacing: -0.5px;
+  }
+
+  .exchangeIllustration {
+    height: auto;
+    aspect-ratio: 1100 / 553;
+    margin-top: 28px;
+  }
+
+  .flowIllustration {
+    height: auto;
+    aspect-ratio: 1103 / 350;
+    margin-top: 28px;
+  }
+
+  .fiatFlowIllustration {
+    height: auto;
+    aspect-ratio: 1103 / 350;
+    margin-top: 28px;
+  }
+
+  .cryptoFlowIllustration {
+    height: auto;
+    aspect-ratio: 1103 / 350;
+    margin-top: 28px;
+  }
+
+  .blockchainWorkFlowIllustration {
+    height: auto;
+    aspect-ratio: 1103 / 350;
+    margin-top: 28px;
+  }
+
+  .related {
+    margin-top: 8px;
+  }
+
+  .related > h2 {
+    margin: 0 0 16px;
+    font-size: 30px;
+    letter-spacing: -0.7px;
+  }
+
+  .relatedGrid {
+    flex-direction: column;
+    gap: 20px;
+    padding: 4px 0;
+  }
+
+  .relatedCard {
+    width: 100%;
+    max-width: none;
+    flex: auto;
+    gap: 18px;
+    padding: 14px;
+    border-width: 3px;
+  }
+
+  .relatedImage {
+    height: auto;
+    aspect-ratio: 310 / 200;
+    flex-basis: auto;
+  }
+
+  .relatedCard h3 {
+    font-size: 22px;
+  }
+
+  .goDeeper {
+    margin-top: 8px;
+    gap: 20px;
+  }
+
+  .goDeeper h2,
+  .goDeeper p {
+    font-size: clamp(23px, 6vw, 30px);
+    letter-spacing: -0.6px;
+  }
+
+  .lessonLink {
+    min-height: 54px;
+    padding: 8px 12px;
+    font-size: 18px;
+  }
+
+  .lessonLink img {
+    width: 27px;
+    height: 27px;
+  }
+
+  .bitcoinWorkFlowIllustration,
+  .cryptoWalletFlowIllustration,
+  .keysFlowIllustration,
+  .cryptoTradingFlowIllustration {
+    height: auto;
+    aspect-ratio: 1103 / 350;
+    margin-top: 28px;
+  }
+}

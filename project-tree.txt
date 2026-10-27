@@ -1,0 +1,311 @@
+.
+├── .env.local
+├── .gitignore
+├── AGENTS.md
+├── CLAUDE.md
+├── README.md
+├── app
+│   ├── (marketing)
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── dashboard
+│   │   └── page.tsx
+│   ├── favicon.ico
+│   ├── fonts
+│   │   ├── PixeloidSans-Bold.ttf
+│   │   └── PixeloidSans.ttf
+│   ├── globals.css
+│   ├── layout.tsx
+│   ├── learn
+│   │   ├── [moduleId]
+│   │   │   └── page.tsx
+│   │   └── page.tsx
+│   ├── lesson
+│   │   └── [lessonId]
+│   │       └── page.tsx
+│   ├── login
+│   │   └── page.tsx
+│   ├── playground
+│   │   └── page.tsx
+│   ├── quiz
+│   │   └── [moduleId]
+│   │       └── page.tsx
+│   └── signup
+│       └── page.tsx
+├── components
+│   ├── .gitkeep
+│   ├── auth
+│   │   └── protected-route.tsx
+│   ├── backgrounds
+│   │   └── grid-background
+│   │       ├── grid-background.tsx
+│   │       └── index.ts
+│   ├── dashboard
+│   │   ├── dashboard-header.tsx
+│   │   ├── dashboard-sidebar.tsx
+│   │   └── stat-card.tsx
+│   ├── layout
+│   │   ├── footer
+│   │   └── navbar
+│   ├── learn
+│   │   ├── learn-content.tsx
+│   │   ├── lesson-card.tsx
+│   │   ├── module-card.tsx
+│   │   ├── module-content.tsx
+│   │   └── module-progress-header.tsx
+│   ├── lesson
+│   │   └── complete-lesson-button.tsx
+│   ├── markdown
+│   │   ├── blockquote.tsx
+│   │   ├── code.tsx
+│   │   ├── heading.tsx
+│   │   ├── image.tsx
+│   │   ├── link.tsx
+│   │   ├── list.tsx
+│   │   ├── markdown-renderer.tsx
+│   │   ├── paragraph.tsx
+│   │   └── table.tsx
+│   ├── marketing
+│   │   └── navbar
+│   │       ├── index.ts
+│   │       ├── navbar-links.tsx
+│   │       ├── navbar-login.tsx
+│   │       ├── navbar-logo.tsx
+│   │       ├── navbar.constants.ts
+│   │       ├── navbar.tsx
+│   │       └── navbar.types.ts
+│   ├── sections
+│   │   └── home
+│   │       ├── academy
+│   │       ├── community
+│   │       ├── hero
+│   │       └── what-we-offer
+│   └── ui
+│       ├── button
+│       │   ├── button.tsx
+│       │   ├── button.types.ts
+│       │   └── index.ts
+│       ├── container
+│       │   ├── container.tsx
+│       │   └── index.ts
+│       ├── heading
+│       ├── index.ts
+│       ├── paragraph
+│       └── section
+│           ├── index.ts
+│           └── section.tsx
+├── constants
+│   └── .gitkeep
+├── content
+│   ├── lessons
+│   │   ├── lesson-foundation-1-1.md
+│   │   ├── lesson-foundation-1-2.md
+│   │   ├── lesson-foundation-1-3.md
+│   │   ├── lesson-foundation-1-4.md
+│   │   └── lesson-foundation-1-5.md
+│   ├── seed
+│   │   ├── index.ts
+│   │   ├── lessons.ts
+│   │   ├── modules.ts
+│   │   ├── paths.ts
+│   │   ├── questions.ts
+│   │   └── quizzes.ts
+│   └── types
+│       ├── lesson.ts
+│       ├── module.ts
+│       ├── paths.ts
+│       ├── question.ts
+│       └── quiz.ts
+├── docs
+│   ├── ARCHITECTURE.md
+│   ├── CHANGELOG.md
+│   ├── CONTRIBUTING.md
+│   ├── DESIGN_SYSTEM.md
+│   ├── FIRESTORE_SCHEMA.md
+│   ├── LULU_PERSONALITY.md
+│   ├── README.md
+│   ├── ROADMAP.md
+│   ├── SECURITY.md
+│   ├── adr
+│   │   ├── ADR-0001-project-architecture.md
+│   │   ├── ADR-0002-feature-driven-architecture.md
+│   │   ├── ADR-0003-event-driven-platform.md
+│   │   ├── ADR-0004-lulu-companion-architecture.md
+│   │   └── ADR_TEMPLATE.md
+│   ├── api
+│   │   ├── AUTH_API.md
+│   │   ├── LEARNING_API.md
+│   │   ├── LULU_API.md
+│   │   ├── QUIZ_API.md
+│   │   └── README.md
+│   ├── architecture
+│   │   ├── DATA_FLOW.md
+│   │   ├── DEPENDENCY_GRAPH.md
+│   │   ├── EVENT_SYSTEM.md
+│   │   ├── FEATURE_STRUCTURE.md
+│   │   ├── FOLDER_STRUCTURE.md
+│   │   ├── STATE_MANAGEMENT.md
+│   │   └── SYSTEM_OVERVIEW.md
+│   ├── engineering
+│   │   ├── CI_CD.md
+│   │   ├── CODE_STYLE.md
+│   │   ├── DEPLOYMENT.md
+│   │   ├── GIT_WORKFLOW.md
+│   │   ├── PERFORMANCE.md
+│   │   └── TESTING_GUIDELINES.md
+│   └── product
+│       ├── GAMIFICATION.md
+│       ├── LEARNING_EXPERIENCE.md
+│       ├── LULU_EXPERIENCE.md
+│       ├── USER_PERSONAS.md
+│       └── VISION.md
+├── eslint.config.mjs
+├── features
+│   ├── auth
+│   │   ├── .gitkeep
+│   │   ├── services
+│   │   │   └── auth.service.ts
+│   │   └── types
+│   │       └── auth.types.ts
+│   ├── core
+│   │   └── events
+│   │       ├── event-bus.ts
+│   │       ├── event-payloads.types.ts
+│   │       ├── event-registry.ts
+│   │       ├── event.types.ts
+│   │       ├── publisher.ts
+│   │       └── subscriber.ts
+│   ├── dashboard
+│   │   └── .gitkeep
+│   ├── gamification
+│   │   └── .gitkeep
+│   ├── leaderboard
+│   │   └── .gitkeep
+│   ├── learn
+│   │   ├── .gitkeep
+│   │   ├── services
+│   │   │   ├── learn.service.ts
+│   │   │   └── lesson-content.service.ts
+│   │   └── types
+│   │       ├── lesson.types.ts
+│   │       ├── module.types.ts
+│   │       └── path.types.ts
+│   ├── lulu
+│   │   ├── components
+│   │   │   ├── lulu-bubble.tsx
+│   │   │   └── lulu-companion.tsx
+│   │   ├── core
+│   │   │   ├── context-engine.ts
+│   │   │   ├── decision-engine.ts
+│   │   │   └── event-interpreter.ts
+│   │   ├── events
+│   │   │   └── event-bus.ts
+│   │   ├── hooks
+│   │   │   └── use-lulu.ts
+│   │   ├── messages
+│   │   │   └── welcome.ts
+│   │   ├── services
+│   │   │   └── lulu.services.ts
+│   │   ├── types
+│   │   │   └── context.types.ts
+│   │   └── utils
+│   ├── profile
+│   │   └── .gitkeep
+│   ├── progress
+│   │   ├── services
+│   │   │   ├── progress.actions.ts
+│   │   │   └── progress.service.ts
+│   │   ├── types
+│   │   │   ├── module-progress.types.ts
+│   │   │   └── progress.types.ts
+│   │   └── utils
+│   │       ├── moduleUnlock.ts
+│   │       ├── progress-calculator.ts
+│   │       └── unlock-rules.ts
+│   ├── quiz
+│   │   ├── .gitkeep
+│   │   ├── actions
+│   │   ├── components
+│   │   │   ├── option-button.tsx
+│   │   │   ├── question-card.tsx
+│   │   │   ├── quiz-container.tsx
+│   │   │   ├── quiz-header.tsx
+│   │   │   ├── quiz-navigation.tsx
+│   │   │   ├── quiz-progress.tsx
+│   │   │   └── quiz-result.tsx
+│   │   ├── models
+│   │   │   └── quiz.model.ts
+│   │   ├── services
+│   │   │   └── quiz.service.ts
+│   │   ├── types
+│   │   │   ├── question.types.ts
+│   │   │   ├── quiz.types.ts
+│   │   │   └── result.types.ts
+│   │   └── utils
+│   │       └── quiz-evaluator.ts
+│   └── user
+│       ├── services
+│       │   └── user.service.ts
+│       └── types
+│           └── user-profile.types.ts
+├── hooks
+│   └── .gitkeep
+├── keys
+│   └── serviceAccountKey.json
+├── lib
+│   ├── auth
+│   │   └── .gitkeep
+│   ├── design
+│   │   ├── breakpoints.ts
+│   │   ├── colors.ts
+│   │   ├── index.ts
+│   │   ├── radius.ts
+│   │   ├── shadows.ts
+│   │   ├── spacing.ts
+│   │   └── typography.ts
+│   ├── firebase
+│   │   └── firebase.ts
+│   ├── firebase-admin
+│   │   └── firebase-admin.ts
+│   ├── markdown
+│   │   └── markdown.ts
+│   └── utils.ts
+├── next-env.d.ts
+├── next.config.ts
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── project-tree.txt
+├── providers
+│   └── auth-provider.tsx
+├── proxy.ts
+├── public
+│   ├── brand
+│   │   ├── .DS_Store
+│   │   └── cp-logo.svg
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── next.svg
+│   ├── vercel.svg
+│   └── window.svg
+├── scripts
+│   ├── seed.ts
+│   └── utils
+│       └── seed-collection.ts
+├── services
+│   └── .gitkeep
+├── styles
+│   ├── base.css
+│   ├── components.css
+│   ├── global.css
+│   ├── theme.css
+│   └── utilities.css
+├── tsconfig.json
+├── tsconfig.tsbuildinfo
+├── types
+│   ├── .gitkeep
+│   └── user.types.ts
+└── utils
+    └── .gitkeep
+
+103 directories, 206 files

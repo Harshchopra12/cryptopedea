@@ -1,0 +1,694 @@
+/* =========================================================
+   CRYPTOPEDEA BLOG
+   FIGMA DESKTOP IMPLEMENTATION
+   ========================================================= */
+
+.cp-blog-page {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ARTICLE FRAME
+
+   Figma Desktop:
+   Frame: 1440px
+   Left: 120px
+   Right: 120px
+   Content: 1200px
+   ========================================================= */
+
+.cp-blog-article {
+  width: min(1200px, calc(100% - 40px));
+
+  margin: 0 auto;
+
+  padding: 74px 0 62px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* =========================================================
+   BLOG TITLE
+
+   Figma:
+   Width: 1200px
+   Height: 60px
+   Horizontal padding: 30px
+   ========================================================= */
+
+.cp-blog-title {
+  width: 100%;
+  height: 60px;
+
+  margin: 0;
+  padding: 0 30px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+
+  background: #abef06;
+
+  border: 2px solid #000000;
+  box-shadow: 5px 5px 0 #000926;
+
+  color: #000000;
+
+  font-family: var(--cp-font-display);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   META ROW
+
+   Figma:
+   Title → Meta = 50px
+   Meta → Hero Image = 50px
+   Height = 60px
+   ========================================================= */
+
+.cp-blog-meta {
+  width: 100%;
+  height: 60px;
+
+  margin: 50px 0;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* =========================================================
+   AUTHOR
+   ========================================================= */
+
+.cp-blog-author {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 18px;
+  font-weight: 400;
+
+  line-height: 30px;
+
+  color: #000926;
+}
+
+
+/* =========================================================
+   TAGS
+   ========================================================= */
+
+.cp-blog-tags {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.cp-blog-tag {
+  height: 40px;
+
+  padding: 0 12px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #000926;
+
+  background: #ffffff;
+
+  color: #000926;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 16px;
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   BLOG IMAGE WRAPPER
+   ========================================================= */
+
+.cp-blog-image-wrapper {
+  width: 1100px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BLOG IMAGES
+
+   Figma:
+   Width  = 1100px
+   Height = 600px
+   Border = 2px
+   Shadow = 5px 5px
+   ========================================================= */
+
+.cp-blog-image {
+  display: block;
+
+  width: 1100px;
+  height: 600px;
+
+  margin: 0;
+  padding: 0;
+
+  max-width: 100%;
+
+  box-sizing: border-box;
+
+  object-fit: cover;
+
+  border: 2px solid #000000;
+  box-shadow: 5px 5px 0 #000926;
+}
+
+
+/* Direct images inside article */
+
+.cp-blog-article > .blog-image,
+.cp-blog-article > img {
+  width: 1100px;
+  height: 600px;
+
+  max-width: 100%;
+
+  display: block;
+
+  flex-shrink: 0;
+
+  object-fit: cover;
+
+  box-sizing: border-box;
+
+  border: 2px solid #000000;
+  box-shadow: 5px 5px 0 #000926;
+}
+
+
+/* =========================================================
+   HERO IMAGE
+
+   Metadata → Hero Image:
+   controlled by .cp-blog-meta margin-bottom
+   ========================================================= */
+
+.cp-blog-hero {
+  margin-top: 0;
+}
+
+
+/* =========================================================
+   BLOG TEXT
+
+   Figma:
+   Width          = 1000px
+   Font           = Space Grotesk
+   Weight         = 400
+   Size           = 24px
+   Line height    = 125% = 30px
+   Letter spacing = -3% = -0.72px
+   Alignment      = Justified
+
+   Image → Text = 100px
+   ========================================================= */
+
+.cp-blog-text {
+  width: 1000px;
+  max-width: 100%;
+
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+
+  box-sizing: border-box;
+
+  color: #000926;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 24px;
+  font-weight: 400;
+
+  line-height: 30px;
+
+  letter-spacing: -0.72px;
+
+  text-align: justify;
+}
+
+
+/* Paragraph reset */
+
+.cp-blog-text p {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Paragraph → paragraph */
+
+.cp-blog-text p + p {
+  margin-top: 20px;
+}
+
+
+/* =========================================================
+   SECOND IMAGE
+
+   Text → Image = 100px
+   ========================================================= */
+
+.cp-blog-secondary-image {
+  width: 1100px;
+  height: 600px;
+
+  max-width: 100%;
+
+  margin-top: 100px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  flex-shrink: 0;
+
+  box-sizing: border-box;
+}
+
+.cp-blog-secondary-image img {
+  width: 1100px;
+  height: 600px;
+
+  max-width: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  box-sizing: border-box;
+
+  border: 2px solid #000000;
+  box-shadow: 5px 5px 0 #000926;
+}
+
+
+/* =========================================================
+   FINAL TEXT
+
+   Second Image → Text = 100px
+   ========================================================= */
+
+.cp-blog-final-text {
+  margin-top: 100px;
+}
+
+
+/* =========================================================
+   MORE BLOGS
+
+   Figma measurements:
+
+   Outer frame:
+   Width  = 1200px
+   Height = 454px
+
+   Padding:
+   10px
+
+   Header:
+   Height = 50px
+
+   Card row:
+   Gap = 25px
+
+   Cards:
+   Width = 310px
+
+   Card images:
+   310 × 200px
+   ========================================================= */
+
+.cp-more-blogs {
+  width: 1200px;
+  height: 454px;
+
+  max-width: 100%;
+
+  margin: 100px auto 0;
+
+  padding: 10px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  align-self: center;
+
+  color: #000926;
+}
+
+
+/* =========================================================
+   MORE BLOGS HEADER
+
+   Height = 50px
+   ========================================================= */
+
+.cp-more-blogs-header {
+  width: 100%;
+  height: 50px;
+
+  flex: 0 0 50px;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+.cp-more-blogs-header h2 {
+  margin: 0;
+  padding: 0;
+
+  font-family: var(--cp-font-display);
+
+  font-size: 24px;
+  font-weight: 700;
+
+  line-height: 30px;
+
+  color: #000926;
+}
+
+
+/* =========================================================
+   MORE BLOGS CARD ROW
+
+   Figma:
+   Horizontal layout
+   Gap = 25px
+   ========================================================= */
+
+.cp-more-blogs-grid {
+  width: 100%;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: row;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  padding: 10px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MORE BLOG CARD
+
+   Width = 310px
+   ========================================================= */
+
+.cp-more-blog-card {
+  width: 310px;
+
+  height: auto;
+
+  flex: 0 0 310px;
+
+  box-sizing: border-box;
+
+  border: 2px solid #000000;
+
+  box-shadow: 5px 5px 0 #000926;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================================================
+   MORE BLOG CARD IMAGE
+
+   Figma:
+   310 × 200px
+   ========================================================= */
+
+.cp-more-blog-card-image {
+  display: block;
+
+  width: 310px;
+  height: 200px;
+
+  flex: 0 0 200px;
+
+  object-fit: cover;
+
+  box-sizing: border-box;
+
+  border: 0;
+
+  border-bottom: 2px solid #000000;
+}
+
+
+/* =========================================================
+   MORE BLOG CARD TITLE
+
+   Padding = 10px
+   ========================================================= */
+
+.cp-more-blog-card-title {
+  width: 100%;
+
+  min-height: 100px;
+
+  padding: 10px;
+
+  box-sizing: border-box;
+
+  font-family: var(--cp-font-display);
+
+  font-size: 16px;
+  font-weight: 700;
+
+  line-height: 20px;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1240px) {
+
+  .cp-blog-article {
+    width: calc(100% - 40px);
+  }
+
+  .cp-blog-title {
+    width: 100%;
+  }
+
+  .cp-blog-meta {
+    width: 100%;
+  }
+
+  .cp-blog-article > .blog-image,
+  .cp-blog-article > img,
+  .cp-blog-image,
+  .cp-blog-secondary-image,
+  .cp-blog-secondary-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .cp-blog-text {
+    width: 100%;
+  }
+
+  .cp-more-blogs {
+    width: 100%;
+    height: auto;
+  }
+
+  .cp-more-blog-card {
+    flex: 1 1 0;
+    width: auto;
+  }
+
+  .cp-more-blog-card-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 310 / 200;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .cp-blog-article {
+    width: calc(100% - 32px);
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+
+  /* Title */
+
+  .cp-blog-title {
+    height: auto;
+    min-height: 50px;
+
+    padding: 14px 18px;
+
+    font-size: 16px;
+  }
+
+
+  /* Meta */
+
+  .cp-blog-meta {
+    height: auto;
+
+    min-height: 60px;
+
+    margin: 30px 0;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    gap: 15px;
+  }
+
+
+  /* Tags */
+
+  .cp-blog-tags {
+    gap: 10px;
+  }
+
+
+  /* Paragraph */
+
+  .cp-blog-text {
+    margin-top: 60px;
+
+    font-size: 18px;
+
+    line-height: 25px;
+
+    letter-spacing: -0.54px;
+  }
+
+
+  /* Secondary image */
+
+  .cp-blog-secondary-image {
+    margin-top: 60px;
+  }
+
+
+  /* Final text */
+
+  .cp-blog-final-text {
+    margin-top: 60px;
+  }
+
+
+  /* More Blogs */
+
+  .cp-more-blogs {
+    width: 100%;
+
+    height: auto;
+
+    margin-top: 60px;
+
+    padding: 10px;
+  }
+
+
+  .cp-more-blogs-header {
+    height: 50px;
+
+    flex: 0 0 50px;
+  }
+
+
+  .cp-more-blogs-grid {
+    flex-direction: column;
+
+    gap: 25px;
+
+    padding: 10px 0;
+  }
+
+
+  .cp-more-blog-card {
+    width: 100%;
+
+    flex: 0 0 auto;
+  }
+
+
+  .cp-more-blog-card-image {
+    width: 100%;
+
+    height: auto;
+
+    aspect-ratio: 310 / 200;
+  }
+}

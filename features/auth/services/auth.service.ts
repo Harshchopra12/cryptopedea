@@ -3,8 +3,12 @@ import type { User } from "@/types/user.types";
 import {
   createUserWithEmailAndPassword,
   deleteUser,
+  GoogleAuthProvider,
   signInWithEmailAndPassword,
+  signInWithPopup,
 } from "firebase/auth";
+const googleProvider =
+  new GoogleAuthProvider();
 import {
   doc,
   getDoc,
@@ -88,6 +92,57 @@ function isUserProfileDocument(
     data.lastActiveAt instanceof
       Timestamp
   );
+}
+async function getUserProfile(
+  uid: string,
+): Promise<User> {
+  const snapshot = await getDoc(
+    doc(db, "users", uid),
+  );
+
+  if (!snapshot.exists()) {
+    throw new Error(
+      "User profile does not exist.",
+    );
+  }
+
+  const profile = snapshot.data();
+
+  if (
+    !isUserProfileDocument(profile)
+  ) {
+    throw new Error(
+      "The authenticated user's profile data is invalid.",
+    );
+  }
+
+  return {
+    uid: profile.uid,
+    email: profile.email,
+    firstName: profile.firstName,
+    lastName: profile.lastName,
+    xp: profile.xp,
+    level: profile.level,
+    streak: profile.streak,
+    activePath: profile.activePath,
+    activeModule:
+      profile.activeModule,
+    badges: profile.badges,
+    certificates:
+      profile.certificates,
+    completedLessons:
+      profile.completedLessons,
+    completedModules:
+      profile.completedModules,
+    createdAt:
+      profile.createdAt
+        .toDate()
+        .toISOString(),
+    lastActiveAt:
+      profile.lastActiveAt
+        .toDate()
+        .toISOString(),
+  };
 }
 
 export async function signUp(

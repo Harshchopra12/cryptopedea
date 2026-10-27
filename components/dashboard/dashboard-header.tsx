@@ -9,7 +9,10 @@ export default function DashboardHeader({
 }: DashboardHeaderProps) {
   return (
     <div>
-      <h1 className="text-4xl font-bold">
+      <h1
+        className="font-display text-4xl font-bold"
+        style={{ fontFamily: "var(--cp-font-display)" }}
+      >
         Welcome back, {firstName}
       </h1>
 

@@ -1,0 +1,22 @@
+.page { width: 100%; padding: 70px 20px 65px; color: #000926; }
+.article { display: flex; width: min(1204px, 100%); margin: auto; flex-direction: column; align-items: center; }
+.titleBanner { display: flex; width: 100%; min-height: 80px; align-items: center; padding: 20px 30px; border: 5px solid #000; background: #2bbcff; box-shadow: 5px 5px #000; }
+.titleBanner h1, .section h2 { margin: 0; font-family: var(--cp-font-body), sans-serif; font-size: 32px; font-weight: 500; line-height: 1.25; letter-spacing: -.96px; }
+.content { display: flex; width: calc(100% - 104px); margin-top: 80px; flex-direction: column; align-items: center; gap: 50px; }
+.hero { position: relative; width: 100%; height: 431px; margin: 0; overflow: hidden; border: 2px solid #000; box-shadow: 5px 5px #000; }
+.hero img, .relatedImage img { object-fit: cover; }
+.definition, .section { width: 100%; margin: 0; font-family: var(--cp-font-body), sans-serif; font-size: 24px; font-weight: 400; line-height: 1.25; letter-spacing: -.72px; text-align: justify; }
+.section { display: flex; flex-direction: column; gap: 30px; }
+.section p { margin: 0; }
+.related { width: 100%; margin-top: 30px; }
+.related > h2, .learnNext h2, .learnNext p { margin: 0; font-family: var(--cp-font-body), sans-serif; font-size: 40px; line-height: 1.25; letter-spacing: -1.2px; }
+.related > h2, .learnNext h2 { font-weight: 700; }
+.relatedGrid { display: flex; gap: 25px; justify-content: space-between; padding: 10px; }
+.relatedCard { display: flex; width: 350px; flex: 0 1 350px; flex-direction: column; gap: 29px; padding: 20px; border: 4px solid #000926; box-shadow: 5px 5px #000; }
+.relatedImage { position: relative; width: 100%; height: 200px; overflow: hidden; border: 2px solid #000926; background: #fbfbfb; }
+.relatedCard h3 { margin: 0; color: #fbfbfb; font-family: var(--cp-font-body), sans-serif; font-size: 28px; font-weight: 700; line-height: 1.08; letter-spacing: -.84px; overflow-wrap: anywhere; }
+.learnNext { display: flex; width: 100%; margin-top: 30px; flex-direction: column; align-items: center; gap: 30px; text-align: center; }
+.lessonLink { display: inline-flex; min-height: 62px; align-items: center; justify-content: center; gap: 10px; padding: 10px 20px; border: 2px solid #000926; background: #abef06; box-shadow: 5px 5px #000; color: #000926; font-family: var(--cp-font-display), sans-serif; font-size: 28px; line-height: 1.5; letter-spacing: -.84px; text-decoration: none; }
+.lessonLink:hover, .lessonLink:focus-visible { outline: 2px solid #000926; outline-offset: 4px; }
+@media (max-width: 1239px) { .content { width: calc(100% - 40px); } .relatedGrid { flex-wrap: wrap; justify-content: center; } .relatedCard { flex: 1 1 280px; max-width: 350px; } }
+@media (max-width: 767px) { .page { padding: 32px 20px 48px; } .titleBanner { min-height: 64px; padding: 14px 16px; border-width: 3px; } .titleBanner h1 { font-size: clamp(22px, 6vw, 28px); letter-spacing: -.6px; } .content { width: 100%; margin-top: 40px; gap: 32px; } .hero { height: auto; aspect-ratio: 1100 / 431; } .definition, .section { font-size: 18px; letter-spacing: -.36px; text-align: left; } .section { gap: 18px; } .related { margin-top: 8px; } .related > h2, .learnNext h2, .learnNext p { font-size: 28px; letter-spacing: -.6px; } .relatedGrid { gap: 20px; padding: 8px 0; } .relatedCard { width: 100%; max-width: none; gap: 20px; padding: 16px; } .relatedImage { height: auto; aspect-ratio: 310 / 200; } .relatedCard h3 { font-size: 24px; } .learnNext { margin-top: 8px; gap: 20px; } .lessonLink { font-size: 20px; } }

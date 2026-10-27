@@ -1,0 +1,117 @@
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: var(--cp-background);
+  color: var(--cp-foreground);
+
+  /* Body Font */
+  font-family: var(--cp-font-body);
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+.font-display {
+  font-family: var(--cp-font-display);
+}
+
+.font-body {
+  font-family: var(--cp-font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--cp-font-display);
+  font-weight: var(--cp-font-bold);
+}
+
+/* ==========================================================================
+   Media
+   ========================================================================== */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* ==========================================================================
+   Selection
+   ========================================================================== */
+
+::selection {
+  background: var(--cp-color-accent);
+  color: var(--cp-color-primary);
+}
+
+/* ==========================================================================
+   Accessibility
+   ========================================================================== */
+
+:focus-visible {
+  outline: 2px solid var(--cp-color-accent);
+  outline-offset: 2px;
+}
