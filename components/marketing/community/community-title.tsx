@@ -9,10 +9,11 @@ export default function CommunityTitle() {
         fontWeight: 700,
         lineHeight: "100%",
         letterSpacing: "-3%",
-        textTransform: "uppercase",
+        textTransform: "none",
       }}
     >
-      JOIN OUR COMMUNITY
+      <span className="block">Join our</span>
+      <span className="block">Community</span>
     </h2>
   );
 }

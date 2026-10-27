@@ -1,9 +1,5 @@
-import BlogArticle from "@/components/marketing/blogs/blog-article";
+import MobileBlogs from "@/components/marketing/mobile/blogs/mobile-blogs";
 
 export default function BlogsPage() {
-  return (
-    <main className="cp-blog-page cp-no-grid">
-      <BlogArticle />
-    </main>
-  );
+    return <MobileBlogs />;
 }

@@ -3,16 +3,16 @@ import type { OfferCardData, OfferPaletteColor } from "./offer.types";
 export const OFFER_COPY = {
   title: "What we Offer",
   viewAllLabel: "View all",
-  featuredTitle: "Interactive Lesions",
+  featuredTitle: "THE CRYPTOPEDEA ACADEMY",
   featuredDescription:
-    "Learn crypto through engaging, hands-on lessons built to make every concept click.",
-  exploreLabel: "Explore all offerings",
+    "Learn crypto by actually doing it! not by scrolling through endless boring lectures.",
+  exploreLabel: "Explore more",
 } as const;
 
 export const OFFER_CARDS: readonly OfferCardData[] = [
-  { id: "leaderboard", title: "Leaderboard" },
-  { id: "achievements", title: "Achievements" },
-  { id: "rewards", title: "Rewards" },
+  { id: "leaderboard", title: "Badges" },
+  { id: "achievements", title: "XP" },
+  { id: "rewards", title: "Quizzes" },
 ] as const;
 
 export const OFFER_PALETTE_COLORS: readonly OfferPaletteColor[] = [

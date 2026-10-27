@@ -1,0 +1,288 @@
+/* ==========================================================================
+   CryptoPedea Mobile Home
+   Figma source: 440px logical viewport
+   Applies only below the md breakpoint.
+   ========================================================================== */
+
+@media (max-width: 767px) {
+    /* ----------------------------------------------------------------------
+       Mobile Home viewport
+       ---------------------------------------------------------------------- */
+
+    .mobile-home {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        overflow-x: hidden;
+        isolation: isolate;
+    }
+
+    /*
+     * The Figma design is authored at 440px wide.
+     * We keep that as the single logical coordinate system and scale the
+     * complete composition uniformly on narrower screens.
+     */
+    .mobile-home__viewport {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .mobile-home__canvas {
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+        min-height: 2247px;
+        margin: 0 auto;
+        padding: 30px 16px 0;
+    }
+
+    /* ----------------------------------------------------------------------
+       Header / navbar relationship
+       ---------------------------------------------------------------------- */
+
+    /*
+     * MobileNavbar is outside MobileHome and remains in normal flow.
+     * It occupies y=74px through y=124px; the canvas padding places the
+     * first Home content at the Figma y=154px coordinate.
+     */
+
+    /* ----------------------------------------------------------------------
+       Hero
+       ---------------------------------------------------------------------- */
+
+    .mobile-hero {
+        position: relative;
+        width: 100%;
+    }
+
+    .mobile-hero__top {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        width: 100%;
+        height: 401px;
+        gap: 17px;
+    }
+
+    .mobile-hero__top > :first-child {
+        width: calc(100% - 89px);
+        min-width: 0;
+    }
+
+    .mobile-hero__top > :last-child {
+        width: 72px;
+        flex: 0 0 72px;
+    }
+
+    .mobile-hero__join {
+        width: 100%;
+        height: 145px;
+        margin-top: 25px;
+    }
+
+    .mobile-hero__join > * {
+        width: 100%;
+        height: 145px;
+    }
+
+    /* ----------------------------------------------------------------------
+       Arrow navigation
+       ---------------------------------------------------------------------- */
+
+    .mobile-arrow-navigation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 228px;
+        height: 60px;
+        margin: 25px auto 0;
+        gap: 24px;
+    }
+
+    /* ----------------------------------------------------------------------
+       Bottom navigation
+       ---------------------------------------------------------------------- */
+
+    .mobile-bottom-nav {
+        width: 292.615px;
+        height: 59.09px;
+        margin: 35.5px auto 0;
+    }
+
+    /* ----------------------------------------------------------------------
+       Community
+       ---------------------------------------------------------------------- */
+
+    .mobile-community {
+        width: 100%;
+        margin: 88.41px 0 0;
+    }
+
+    .mobile-community__content,
+    .mobile-community__heading,
+    .mobile-community__heading h2 {
+        width: 100%;
+        max-width: 398px;
+    }
+
+    .mobile-community__heading h2 {
+        white-space: normal;
+        font-size: clamp(36px, 12.727vw, 56px);
+    }
+
+    .mobile-what-we-offer {
+        width: min(100%, 385px);
+        margin: 80px auto 0;
+        padding: 50px 20px;
+        border: 3px solid #000926;
+        background: #fbfbfb;
+    }
+
+    .mobile-what-we-offer__header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+
+    .mobile-what-we-offer__header h2,
+    .mobile-academy h2 {
+        margin: 0;
+        color: #000926;
+        font-family: var(--cp-font-display), sans-serif;
+        font-size: clamp(32px, 8.2vw, 40px);
+        line-height: 1.1;
+        letter-spacing: -0.96px;
+        text-transform: none;
+    }
+
+    .mobile-what-we-offer__view-all {
+        flex: 0 0 auto;
+        border: 2px solid #000926;
+        background: #fbfbfb;
+        box-shadow: 5px 5px 0 #000;
+        padding: 10px 20px;
+        color: #000926;
+        font-family: var(--cp-font-body), sans-serif;
+        font-size: 20px;
+        line-height: 1.25;
+    }
+
+    .mobile-what-we-offer__featured {
+        border: 3px solid #000926;
+        background: #ff5c5d;
+        box-shadow: 5px 5px 0 #000;
+    }
+
+    .mobile-what-we-offer__image {
+        margin: 20px;
+        border: 2px solid #000926;
+        background: #f9eec1;
+    }
+
+    .mobile-what-we-offer__image img {
+        display: block;
+        width: 100%;
+        height: 350px;
+        object-fit: contain;
+    }
+
+    .mobile-what-we-offer__content {
+        padding: 30px 15px;
+        color: #fbfbfb;
+    }
+
+    .mobile-what-we-offer__content h3 {
+        margin: 0 0 20px;
+        font-family: var(--cp-font-body), sans-serif;
+        font-size: 28px;
+        line-height: 1.08;
+    }
+
+    .mobile-what-we-offer__content p {
+        margin: 0;
+        font-family: var(--cp-font-body), sans-serif;
+        font-size: 20px;
+        line-height: 1.25;
+    }
+
+    .mobile-what-we-offer__art {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-top: 24px;
+    }
+
+    .mobile-what-we-offer__art > img {
+        width: min(150px, 48%);
+        height: auto;
+    }
+
+    .mobile-what-we-offer__palette {
+        display: grid;
+        grid-template-columns: repeat(2, 46px);
+        gap: 16px;
+    }
+
+    .mobile-what-we-offer__palette span {
+        display: block;
+        width: 46px;
+        height: 46px;
+        border: 2px solid #000;
+        border-radius: 50%;
+    }
+
+    .mobile-what-we-offer__palette span:nth-child(1) { background: #44a4fb; }
+    .mobile-what-we-offer__palette span:nth-child(2) { background: #253900; }
+    .mobile-what-we-offer__palette span:nth-child(3) { background: #b3033e; }
+    .mobile-what-we-offer__palette span:nth-child(4) { background: #f1c43f; }
+
+    .mobile-academy {
+        width: 100%;
+        margin-top: 90px;
+        padding-bottom: 30px;
+    }
+
+    .mobile-academy h2 {
+        margin: 0 20px 50px;
+        text-align: center;
+        font-size: clamp(40px, 12.7vw, 56px);
+    }
+
+    .mobile-academy__scroller {
+        width: 100vw;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+    }
+
+    .mobile-academy__scroller::-webkit-scrollbar {
+        display: none;
+    }
+
+    .mobile-academy__track {
+        --mobile-academy-card-width: min(340px, calc(100vw - 80px));
+        display: flex;
+        width: max-content;
+        gap: 20px;
+        padding: 10px max(16px, calc((100vw - var(--mobile-academy-card-width)) / 2)) 20px;
+    }
+
+    .mobile-academy__slide {
+        width: var(--mobile-academy-card-width);
+        flex: 0 0 var(--mobile-academy-card-width);
+        scroll-snap-align: center;
+    }
+
+    .mobile-academy__slide article {
+        width: 100%;
+    }
+
+    .mobile-academy__slide article > div:first-child {
+        width: calc(100% - 40px);
+    }
+}

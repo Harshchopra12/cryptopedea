@@ -1,13 +1,12 @@
 /**
  * Pixel-perfect Hero CTA.
- * Matches the Figma "Join Now $" button.
+ * Matches the Figma "Enter the Academy" button.
  */
 export default function HeroButton() {
   return (
     <button
       type="button"
       className="
-        mt-[30px]
         inline-flex
         h-[62px]
         w-[194px]
@@ -35,7 +34,7 @@ export default function HeroButton() {
         fontFamily: "Pixeloid Sans",
       }}
     >
-      Join Now $
+      ENTER THE ACADEMY
     </button>
   );
 }

@@ -6,13 +6,15 @@ export default function TextBlock() {
       className="
         flex
         w-[385px]
+        px-[20px]
+        py-[30px]
         flex-col
       "
     >
       <h3
         className="
           font-[var(--cp-font-display)]
-          text-[28px]
+          text-[26px]
           font-bold
           leading-[30px]
           tracking-[-0.03em]
@@ -24,7 +26,7 @@ export default function TextBlock() {
 
       <p
         className="
-          mt-[18px]
+          mt-[20px]
           w-[345px]
           font-['Space_Grotesk']
           text-[20px]

@@ -1,0 +1,16 @@
+.shell {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .shell > :global(header) {
+    width: min(1204px, calc(100% - 40px));
+    margin: 30px auto 0;
+    border: 2px solid #000926;
+    box-shadow: 5px 5px 0 #000;
+  }
+
+  .shell > :global(header) > nav {
+    width: 100% !important;
+  }
+}

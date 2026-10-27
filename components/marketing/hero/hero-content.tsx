@@ -12,7 +12,8 @@ export default function HeroContent() {
       className="
         absolute
         left-1/2
-        top-[251px]
+        top-1/2
+        -translate-y-1/2
         flex
         w-[951px]
         -translate-x-1/2

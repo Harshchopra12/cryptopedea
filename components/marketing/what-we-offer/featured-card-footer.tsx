@@ -17,7 +17,7 @@ export default function FeaturedCardFooter({
         items-start
       "
       style={{
-        padding: "55px 15px 0",
+        padding: "0 15px 0",
         gap: "25px",
       }}
     >

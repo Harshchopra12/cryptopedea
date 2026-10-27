@@ -8,7 +8,7 @@ export default function FeaturedCard() {
     flex
     flex-col
     w-[770px]
-    h-[660px]
+    h-[720px]
     gap-[10px]
     border-[2px]
     border-[#000926]

@@ -6,6 +6,8 @@ export default function HeroDecorations() {
   return (
     <>
       {HERO_DECORATIONS.map((asset) => {
+        const targetClass = `cp-hero-decoration--${asset.asset}`;
+
         if (
           asset.asset === "doubleArrowTop" ||
           asset.asset === "doubleArrowBottom"
@@ -13,7 +15,7 @@ export default function HeroDecorations() {
           return (
             <div
               key={asset.asset}
-              className="absolute flex gap-[2px] pointer-events-none select-none"
+              className={`absolute flex gap-[2px] pointer-events-none select-none ${targetClass}`}
               style={{
                 top: asset.top,
                 left: asset.left,
@@ -25,23 +27,27 @@ export default function HeroDecorations() {
                 transformOrigin: "center",
               }}
             >
-              <Image
-                src={asset.src}
-                alt=""
-                aria-hidden
-                width={asset.width}
-                height={asset.height}
-                priority
-              />
+              <div className="cp-hero-decoration-float">
+                <div className="cp-hero-decoration-interactive flex gap-[2px]">
+                  <Image
+                    src={asset.src}
+                    alt=""
+                    aria-hidden
+                    width={asset.width}
+                    height={asset.height}
+                    priority
+                  />
 
-              <Image
-                src={asset.src}
-                alt=""
-                aria-hidden
-                width={asset.width}
-                height={asset.height}
-                priority
-              />
+                  <Image
+                    src={asset.src}
+                    alt=""
+                    aria-hidden
+                    width={asset.width}
+                    height={asset.height}
+                    priority
+                  />
+                </div>
+              </div>
             </div>
           );
         }
@@ -49,21 +55,25 @@ export default function HeroDecorations() {
         return (
           <div
             key={asset.asset}
-            className="absolute pointer-events-none select-none"
+            className={`absolute pointer-events-none select-none ${targetClass}`}
             style={{
               top: asset.top,
               left: asset.left,
               zIndex: asset.zIndex,
             }}
           >
-            <Image
-              src={asset.src}
-              alt=""
-              aria-hidden
-              width={asset.width}
-              height={asset.height}
-              priority
-            />
+            <div className="cp-hero-decoration-float">
+              <div className="cp-hero-decoration-interactive">
+                <Image
+                  src={asset.src}
+                  alt=""
+                  aria-hidden
+                  width={asset.width}
+                  height={asset.height}
+                  priority
+                />
+              </div>
+            </div>
           </div>
         );
       })}

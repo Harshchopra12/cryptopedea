@@ -1,15 +1,13 @@
 export const FIGMA_ASSETS = {
-  mainIllustration: "/what-we-offer/main-illustration.png",
+  mainIllustration: "/home/offer-scene.png",
 
-  dPad: "/what-we-offer/d-pad.svg",
+  dPad: "/home/d-pad.svg",
 
-  rightCardOne: "/what-we-offer/right-card-one.png",
-  rightCardTwo: "/what-we-offer/right-card-two.png",
-  rightCardThree: "/what-we-offer/right-card-three.jpg",
+  rightCardOne: "/home/badge.png",
+  rightCardTwo: "/home/xp.png",
+  rightCardThree: "/home/quizzes.png",
 
-  arrowUp: "/what-we-offer/arrow-up.svg",
-  arrowDown: "/what-we-offer/arrow-down.svg",
+  arrowUp: "/home/offer-arrow.svg",
+  arrowDown: "/home/offer-arrow.svg",
 
-  // These three are not available locally yet.
-  // We will wire them once their actual Figma assets are exported.
 } as const;

@@ -9,21 +9,21 @@ export default function ArrowButton({
   direction,
 }: ArrowButtonProps) {
   const src =
-    direction === "up"
-      ? FIGMA_ASSETS.arrowUp
-      : FIGMA_ASSETS.arrowDown;
+    FIGMA_ASSETS.arrowUp;
 
   return (
     <button
       type="button"
       aria-label={direction === "up" ? "Previous" : "Next"}
-      className="flex h-[70px] w-[70px] items-center justify-center"
+      className={`flex h-[30px] w-[60px] items-center justify-center ${
+        direction === "down" ? "rotate-180" : ""
+      }`}
     >
       <Image
         src={src}
         alt=""
-        width={70}
-        height={70}
+        width={60}
+        height={30}
         draggable={false}
       />
     </button>

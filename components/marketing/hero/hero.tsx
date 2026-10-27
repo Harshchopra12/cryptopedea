@@ -16,7 +16,7 @@ export default function Hero() {
     >
 
 
-      <div className="relative z-10">
+      <div className="relative z-10 min-h-[816px]">
         <HeroDecorations />
         <HeroContent />
       </div>

@@ -46,7 +46,7 @@ export default function JoinAcademy() {
                         text-[#000926]
                     "
                 >
-                    Join the Academy
+                    CHOOSE YOUR REALM
                 </h2>
 
                 {/* Academy cards */}

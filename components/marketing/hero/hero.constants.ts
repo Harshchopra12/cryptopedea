@@ -16,7 +16,7 @@ export const HERO_DIMENSIONS = {
   WIDTH: 1441,
   HEIGHT: 816,
 
-  MIN_HEIGHT_CLASSNAME: "min-h-[960px]",
+  MIN_HEIGHT_CLASSNAME: "min-h-[816px]",
 
   BORDER_WIDTH: 3,
 

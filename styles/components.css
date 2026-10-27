@@ -26,3 +26,118 @@
 
   background-repeat: repeat;
 }
+
+@keyframes cp-academy-cloud-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.cp-academy-cloud-track {
+  display: flex;
+  height: 100%;
+  width: 200%;
+  animation: cp-academy-cloud-scroll 48s linear infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cp-academy-cloud-track {
+    animation: none;
+  }
+}
+
+@keyframes cp-hero-decoration-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.cp-hero-decoration--ethereum,
+.cp-hero-decoration--bitcoin,
+.cp-hero-decoration--dollar,
+.cp-hero-decoration--doubleArrowTop,
+.cp-hero-decoration--doubleArrowBottom,
+.cp-hero-decoration--arcadeMachine,
+.cp-hero-decoration--solana,
+.cp-hero-decoration--chain {
+  pointer-events: auto;
+}
+
+.cp-hero-decoration-float {
+  animation: cp-hero-decoration-float 4.8s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.cp-hero-decoration-interactive {
+  transform-origin: center;
+  transition: transform 280ms ease;
+}
+
+.cp-hero-decoration--ethereum .cp-hero-decoration-float {
+  animation-duration: 4s;
+  animation-delay: -0.7s;
+}
+
+.cp-hero-decoration--bitcoin .cp-hero-decoration-float {
+  animation-duration: 4.7s;
+  animation-delay: -1.8s;
+}
+
+.cp-hero-decoration--dollar .cp-hero-decoration-float {
+  animation-duration: 3.5s;
+  animation-delay: -2.4s;
+}
+
+.cp-hero-decoration--doubleArrowTop .cp-hero-decoration-float {
+  animation-duration: 4.3s;
+  animation-delay: -1.1s;
+}
+
+.cp-hero-decoration--doubleArrowBottom .cp-hero-decoration-float {
+  animation-duration: 5.2s;
+  animation-delay: -3s;
+}
+
+.cp-hero-decoration--arcadeMachine .cp-hero-decoration-float {
+  animation-duration: 5.8s;
+  animation-delay: -2s;
+}
+
+.cp-hero-decoration--solana .cp-hero-decoration-float {
+  animation-duration: 6.6s;
+  animation-delay: -3.7s;
+}
+
+.cp-hero-decoration--chain .cp-hero-decoration-float {
+  animation-duration: 4.6s;
+  animation-delay: -1.5s;
+}
+
+.cp-hero-decoration-interactive:hover {
+  transform: translateY(-4px) scale(1.12) rotate(3deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cp-hero-decoration-float {
+    animation: none;
+  }
+
+  .cp-hero-decoration-interactive {
+    transition: none;
+  }
+
+  .cp-hero-decoration-interactive:hover {
+    transform: none;
+  }
+}

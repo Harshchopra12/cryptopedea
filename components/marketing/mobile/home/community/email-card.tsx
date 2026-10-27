@@ -1,0 +1,119 @@
+export default function EmailCard() {
+    return (
+        <section
+            className="
+        mobile-email-card
+        flex
+        h-[355px]
+        w-full
+        shrink-0
+        flex-col
+        items-start
+        overflow-hidden
+        border-[5px]
+        border-solid
+        border-black
+        bg-[#2bbcff]
+        px-[30px]
+        py-[40px]
+        shadow-[10px_10px_0_#000000]
+    "
+        >
+            <div
+                className="
+                    flex
+                    w-full
+                    flex-col
+                    items-start
+                    gap-[25px]
+                    p-[10px]
+                "
+            >
+                <h3
+                    className="
+                        m-0
+                        w-full
+                        text-[32px]
+                        font-bold
+                        leading-[1.25]
+                        tracking-[-0.96px]
+                        text-[#000926]
+                    "
+                    style={{
+                        fontFamily:
+                            "var(--cp-font-body), 'Space Grotesk', sans-serif",
+                    }}
+                >
+                    Email Us
+                </h3>
+
+                <div
+                    className="
+                        flex
+                        w-[calc(100%_-_20px)]
+                        self-center
+                        items-start
+                        border-2
+                        border-solid
+                        border-black
+                        bg-white
+                        p-[10px]
+                        shadow-[5px_5px_0_#000000]
+                    "
+                >
+                    <p
+                        className="
+                            m-0
+                            w-full
+                            text-[20px]
+                            font-normal
+                            leading-[1.25]
+                            tracking-[-0.6px]
+                            text-black
+                        "
+                        style={{
+                            fontFamily:
+                                "var(--cp-font-body), 'Space Grotesk', sans-serif",
+                        }}
+                    >
+                        Have a question or need assistance? We&apos;d be happy to
+                        help.
+                    </p>
+                </div>
+
+                <div
+                    className="
+                        flex
+                        w-[calc(100%_-_20px)]
+                        self-center
+                        items-start
+                        border-2
+                        border-solid
+                        border-black
+                        bg-white
+                        p-[10px]
+                        shadow-[5px_5px_0_#000000]
+                    "
+                >
+                    <p
+                        className="
+                            m-0
+                            w-full
+                            text-[20px]
+                            font-normal
+                            leading-[1.25]
+                            tracking-[-0.6px]
+                            text-black
+                        "
+                        style={{
+                            fontFamily:
+                                "var(--cp-font-body), 'Space Grotesk', sans-serif",
+                        }}
+                    >
+                        Email: Contact@cryptopedea.com
+                    </p>
+                </div>
+            </div>
+        </section>
+    );
+}

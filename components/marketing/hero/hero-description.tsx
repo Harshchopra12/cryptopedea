@@ -1,23 +1,12 @@
 export default function HeroDescription() {
   return (
-    <p
-      className="
-        mt-[30px]
-        h-[60px]
-        w-[951px]
-        text-center
-        text-[24px]
-        font-normal
-        leading-[125%]
-        tracking-[-0.03em]
-        text-[var(--cp-color-primary)]
-      "
-      style={{
-        fontFamily: "Space Grotesk",
-      }}
-    >
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua
-    </p>
+    <div className="flex w-[951px] flex-col items-center gap-[30px] text-center text-[var(--cp-color-primary)]">
+      <p className="text-[36px] font-medium leading-[125%] tracking-[-0.03em]">
+        LEARN. DECODE. TRADE. EARN
+      </p>
+      <p className="text-[24px] font-normal leading-[125%] tracking-[-0.03em]">
+        Learn crypto from the basics to advanced through interactive, gamified learning.
+      </p>
+    </div>
   );
 }

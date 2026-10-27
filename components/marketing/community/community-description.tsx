@@ -11,7 +11,7 @@ export default function CommunityDescription() {
         letterSpacing: "0%",
       }}
     >
-      Get Updates & News Related to Cryptopedea
+      Get updates &amp; News related to Cryptopedea
     </p>
   );
 }

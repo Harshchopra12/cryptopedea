@@ -15,15 +15,15 @@ export default function SocialButton({
         flex
         items-center
         justify-center
-        border-[3px]
-        border-[#000926]
+        border-2
+        border-[#FBFBFB]
         text-white
       "
       style={{
-        width: "74px",
-        height: "74px",
+        width: "116.5px",
+        height: "116.5px",
         background,
-        boxShadow: "4px 4px 0 #000926",
+        boxShadow: "5px 5px 0 #000000",
         fontSize: "24px",
       }}
     >

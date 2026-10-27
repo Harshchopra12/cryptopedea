@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Space_Grotesk } from "next/font/google";
 import GridBackgroundWrapper from "@/components/layout/grid-background-wrapper";
 import localFont from "next/font/local";
@@ -71,6 +71,11 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({

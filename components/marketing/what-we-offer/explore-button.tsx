@@ -33,7 +33,7 @@ export default function ExploreButton() {
           text-[#000926]
         "
       >
-        Explore all offerings
+        {OFFER_COPY.exploreLabel}
       </span>
     </button>
   );

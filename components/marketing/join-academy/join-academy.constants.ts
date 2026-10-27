@@ -3,23 +3,23 @@ import type { AcademyCardProps } from "./academy.types";
 export const ACADEMY_CARDS: AcademyCardProps[] = [
   {
     id: "advance",
-    title: "Advance",
+    title: "Trading Arena",
     color: "#9440E0",
-    image: "/academy/Advance-illustration.svg",
+    image: "/home/trading-arena.png",
     coins: [1, 2],
   },
   {
     id: "beginner",
-    title: "Beginner",
+    title: "Foundation",
     color: "#44A4FB",
-    image: "/academy/Beginner-illustration.svg",
+    image: "/home/offer-scene.png",
     coins: [1, 2],
   },
   {
     id: "expert",
-    title: "Expert",
+    title: "Deep Dive lab",
     color: "#FF5C5D",
-    image: "/academy/Expert-illustration.svg",
+    image: "/home/deep-dive-lab.png",
     coins: [1, 2],
   },
 ];

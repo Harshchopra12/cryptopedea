@@ -1,4 +1,4 @@
-import OfferHeader from "./offer-header";
+
 import FeaturedCard from "./featured-card";
 import SidePanel from "./side-panel";
 
@@ -10,30 +10,30 @@ export default function OfferSection() {
         w-full
         flex
         justify-center
-        py-[100px]
+        py-0
       "
     >
-      {/* =========================================================
-          WHAT WE OFFER FRAME
-          This sits above the global grid (z-index: 1).
-          The grid remains visible everywhere outside this frame.
-          ========================================================= */}
+      {/* WHAT WE OFFER FRAME */}
       <div
         className="
           relative
           z-[10]
           w-[1200px]
-          h-[850px]
+          h-[820px]
           flex
           border-[3px]
           border-[#000926]
           bg-[#FBFBFB]
         "
+        style={{
+          borderRight: "3px solid #000926",
+          boxSizing: "border-box",
+        }}
       >
         {/* LEFT PANEL */}
         <div
           className="
-            w-[807px]
+            w-[810px]
             h-full
             shrink-0
           "
@@ -47,11 +47,8 @@ export default function OfferSection() {
               flex-col
               w-[770px]
               h-[750px]
-              gap-[40px]
             "
           >
-            <OfferHeader />
-
             <FeaturedCard />
           </div>
         </div>

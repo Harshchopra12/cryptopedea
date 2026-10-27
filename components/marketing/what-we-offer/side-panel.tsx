@@ -1,3 +1,4 @@
+
 import ArrowButton from "./arrow-button";
 import ExploreButton from "./explore-button";
 import OfferCard from "./offer-card";
@@ -12,6 +13,7 @@ export default function SidePanel() {
         h-full
         shrink-0
         border-l-[3px]
+        border-r-[3px]
         border-[#000926]
         bg-[#FBFBFB]
         box-border

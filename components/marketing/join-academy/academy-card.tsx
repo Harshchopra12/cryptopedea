@@ -4,14 +4,13 @@ export default function AcademyCard({
     title,
     color,
     image,
-    coins,
 }: AcademyCardProps) {
     return (
         <article
             className="
                 relative
                 flex
-                h-auto
+                h-[480px]
                 w-[340px]
                 shrink-0
                 flex-col
@@ -24,13 +23,12 @@ export default function AcademyCard({
                 backgroundColor: color,
             }}
         >
-            {/* Illustration area */}
             <div
                 className="
                     mx-[20px]
                     mt-[20px]
                     flex
-                    h-[300px]
+                    h-[350px]
                     items-center
                     justify-center
                     overflow-hidden
@@ -58,7 +56,6 @@ export default function AcademyCard({
                 )}
             </div>
 
-            {/* Bottom row */}
             <div
                 className="
                     flex
@@ -73,7 +70,7 @@ export default function AcademyCard({
                 <span
                     className="
                         font-[var(--cp-font-body)]
-                        text-[20px]
+                        text-[28px]
                         font-bold
                         leading-none
                         text-[#FBFBFB]
@@ -82,29 +79,8 @@ export default function AcademyCard({
                     {title}
                 </span>
 
-                <div className="flex items-center gap-[10px]">
-                    {coins.map((coin, index) => (
-                        <div
-                            key={`${title}-coin-${index}`}
-                            className="
-                                flex
-                                h-[40px]
-                                w-[40px]
-                                items-center
-                                justify-center
-                                border-[2px]
-                                border-[#000926]
-                                bg-[#FBFBFB]
-                                font-[var(--cp-font-display)]
-                                text-[18px]
-                                font-bold
-                                leading-none
-                                text-[#000926]
-                            "
-                        >
-                            $
-                        </div>
-                    ))}
+                <div className="flex h-[56px] w-[56px] items-center justify-center border-2 border-[#000926] bg-[#FBFBFB] p-[10px] shadow-[5px_5px_0_#000926]">
+                    <img src="/home/realm-arrow.svg" alt="" className="h-[33px] w-[33px]" />
                 </div>
             </div>
         </article>

@@ -18,8 +18,9 @@ export default function OfferCard({
         h-[170px]
         w-[340px]
         shrink-0
-        items-center
-        justify-center
+        relative
+        items-end
+        p-[15px]
         border-[2px]
         border-[#000926]
         bg-[#FBFBFB]
@@ -29,8 +30,11 @@ export default function OfferCard({
       <img
         src={IMAGE_MAP[id]}
         alt={title}
-        className="max-h-[110px] max-w-[210px] object-contain"
+      className="absolute left-1/2 top-[10px] h-[129px] w-[129px] -translate-x-1/2 object-contain"
       />
+      <span className="text-[32px] font-bold leading-[1.2] tracking-[-0.96px] text-black">
+      {title}
+      </span>
     </article>
   );
 }
