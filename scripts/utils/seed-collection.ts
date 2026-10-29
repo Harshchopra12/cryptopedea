@@ -1,4 +1,4 @@
-import { adminDb } from "@/lib/firebase-admin/firebase-admin";
+import { getAdminDb } from "@/lib/firebase-admin/firebase-admin";
 import { WriteBatch } from "firebase-admin/firestore";
 
 export async function seedCollection<
@@ -7,6 +7,7 @@ export async function seedCollection<
   collectionName: string,
   documents: T[],
 ) {
+  const adminDb = getAdminDb();
   const batch: WriteBatch = adminDb.batch();
 
   for (const document of documents) {
