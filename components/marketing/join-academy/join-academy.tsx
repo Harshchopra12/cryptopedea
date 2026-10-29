@@ -2,6 +2,7 @@ import AcademyCard from "./academy-card";
 import AcademyConnector from "./academy-connector";
 import AcademyClouds from "./academy-clouds";
 import { ACADEMY_CARDS } from "./join-academy.constants";
+import styles from "./academy-card.module.css";
 
 export default function JoinAcademy() {
     return (
@@ -69,40 +70,44 @@ export default function JoinAcademy() {
 
                     {/* Advance */}
                     <div
+                        className={styles.desktopHoverTarget}
                         style={{
                             position: "relative",
                             zIndex: 10,
                             width: "340px",
                             flexShrink: 0,
-                            marginTop: "69px",
+                            marginTop: "130px",
                         }}
                     >
-                        <AcademyCard {...ACADEMY_CARDS[0]} />
+                        <AcademyCard {...ACADEMY_CARDS[0]} desktop />
                     </div>
 
                     {/* Beginner */}
                     <div
+                        className={styles.desktopHoverTarget}
                         style={{
                             position: "relative",
                             zIndex: 10,
                             width: "340px",
                             flexShrink: 0,
+                            marginTop: "10px",
                         }}
                     >
-                        <AcademyCard {...ACADEMY_CARDS[1]} />
+                        <AcademyCard {...ACADEMY_CARDS[1]} desktop />
                     </div>
 
                     {/* Expert */}
                     <div
+                        className={styles.desktopHoverTarget}
                         style={{
                             position: "relative",
                             zIndex: 10,
                             width: "340px",
                             flexShrink: 0,
-                            marginTop: "80px",
+                            marginTop: "130px",
                         }}
                     >
-                        <AcademyCard {...ACADEMY_CARDS[2]} />
+                        <AcademyCard {...ACADEMY_CARDS[2]} desktop />
                     </div>
                 </div>
             </div>

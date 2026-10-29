@@ -3,7 +3,15 @@ import DPad from "./d-pad";
 import FeaturedCardFooter from "./featured-card-footer";
 import TextBlock from "./text-block";
 
-export default function FeaturedContent() {
+interface FeaturedContentProps {
+  selectedColor: string;
+  onSelectColor: (color: string) => void;
+}
+
+export default function FeaturedContent({
+  selectedColor,
+  onSelectColor,
+}: FeaturedContentProps) {
   return (
     <FeaturedCardFooter>
       <div className="w-[150px] shrink-0">
@@ -15,7 +23,10 @@ export default function FeaturedContent() {
       </div>
 
       <div className="flex w-[150px] shrink-0 justify-end">
-        <ColorPalette />
+        <ColorPalette
+          selectedColor={selectedColor}
+          onSelectColor={onSelectColor}
+        />
       </div>
     </FeaturedCardFooter>
   );

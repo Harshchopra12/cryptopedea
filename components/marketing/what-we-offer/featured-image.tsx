@@ -1,5 +1,3 @@
-import { FIGMA_ASSETS } from "./figma-assets";
-
 export default function FeaturedImage() {
   return (
     <div
@@ -25,9 +23,12 @@ export default function FeaturedImage() {
           border: "2px solid #000926",
         }}
       >
-        <img
-          src={FIGMA_ASSETS.mainIllustration}
-          alt=""
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          src="/videos/academy-console.mp4"
           className="
             absolute
             inset-0

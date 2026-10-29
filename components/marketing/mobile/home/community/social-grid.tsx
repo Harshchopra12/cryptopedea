@@ -1,9 +1,6 @@
-const SOCIAL_ASSETS = [
-    "/mobile-home/social/4af5e.svg",
-    "/mobile-home/social/24250.svg",
-    "/mobile-home/social/58fac.svg",
-    "/mobile-home/social/fb0af.svg",
-];
+import { COMMUNITY_SOCIAL_LINKS } from "@/components/marketing/community/community.constants";
+
+const SOCIAL_LINKS = COMMUNITY_SOCIAL_LINKS;
 
 export default function SocialGrid() {
     return (
@@ -17,17 +14,21 @@ export default function SocialGrid() {
                 gap-[20px]
             "
         >
-            {SOCIAL_ASSETS.map((src) => (
-                <div
-                    key={src}
-                    className="h-[116.5px] w-[116.5px]"
+            {SOCIAL_LINKS.map((social) => (
+                <a
+                    key={social.id}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit Cryptopedea on ${social.label}`}
+                    className="block h-[116.5px] w-[116.5px]"
                 >
                     <img
-                        src={src}
+                        src={social.icon}
                         alt=""
                         className="block h-full w-full"
                     />
-                </div>
+                </a>
             ))}
         </div>
     );

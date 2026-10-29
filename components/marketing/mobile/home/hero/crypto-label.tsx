@@ -4,18 +4,24 @@ export default function CryptoLabel() {
             className="
                 flex
                 h-[401px]
-                w-[72px]
+                w-[76px]
                 shrink-0
                 items-center
                 justify-center
                 border-2
                 border-[#000926]
                 bg-white
+                p-[10px]
                 shadow-[4px_4px_0_#000000]
             "
         >
             <span
                 className="
+                    flex
+                    h-[381px]
+                    w-[52px]
+                    items-center
+                    justify-center
                     whitespace-nowrap
                     text-[48px]
                     font-bold

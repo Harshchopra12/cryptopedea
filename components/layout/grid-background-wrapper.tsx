@@ -7,8 +7,10 @@ export default function GridBackgroundWrapper() {
 
   const isBlogPage =
     pathname === "/blogs" || pathname.startsWith("/blogs/");
+  const isGlossaryPage =
+    pathname === "/glossary" || pathname.startsWith("/glossary/");
 
-  if (isBlogPage) {
+  if (isBlogPage || isGlossaryPage) {
     return null;
   }
 

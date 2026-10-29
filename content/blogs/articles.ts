@@ -641,6 +641,122 @@ export const BLOG_ARTICLES: BlogArticleData[] = [
   })),
 ];
 
+const RELATED_CONCEPTS_BY_SLUG: Record<string, readonly string[]> = {
+  "what-gives-money-its-value": [
+    "What Is Fiat Money",
+    "What Is Cryptocurrency",
+    "Why Does Bitcoin Have Value",
+  ],
+  "what-is-fiat-money": [
+    "What Gives Money Its Value",
+    "What Is Cryptocurrency",
+    "What Is Bitcoin",
+    "What Is Inflation",
+  ],
+  "what-is-cryptocurrency": [
+    "What Is Blockchain",
+    "What Is Bitcoin",
+    "What Is a Crypto Wallet",
+    "What Is Decentralization",
+  ],
+  "what-is-blockchain": [
+    "How Does Blockchain Work",
+    "What Is Bitcoin",
+    "What Is a Cryptocurrency",
+    "What Is a Node",
+  ],
+  "how-does-blockchain-work": [
+    "What Is Blockchain",
+    "What Is a Blockchain Node",
+    "What Is Bitcoin Mining",
+    "What Is Consensus",
+  ],
+  "what-is-bitcoin": [
+    "How Does Bitcoin Work",
+    "What Is Blockchain",
+    "What Is a Crypto Wallet",
+    "Why Does Bitcoin Have Value",
+  ],
+  "how-does-bitcoin-work": [
+    "What Is Bitcoin",
+    "What Is Blockchain",
+    "What Is Bitcoin Mining",
+    "What Is a Bitcoin Transaction",
+    "What Is Proof of Work",
+  ],
+  "why-does-bitcoin-have-value": [
+    "What Gives Money Its Value",
+    "What Is Bitcoin",
+    "What Is Bitcoin Mining",
+    "What Is Bitcoin Halving",
+    "What Is Market Cap",
+  ],
+  "what-is-crypto-wallet": [
+    "Public Key vs Private Key",
+    "What Is a Crypto Address",
+    "What Is a Seed Phrase",
+    "Hot Wallet vs Cold Wallet",
+    "What Is Self-Custody",
+  ],
+  "public-key-vs-private-key": [
+    "What Is a Crypto Wallet",
+    "What Is a Crypto Address",
+    "What Is a Seed Phrase",
+    "What Is Self-Custody",
+    "Hot Wallet vs Cold Wallet",
+  ],
+  "what-is-ethereum": [
+    "What Is Blockchain",
+    "What Is a Smart Contract",
+    "What Is DeFi",
+    "What Is ETH",
+    "What Are Gas Fees",
+  ],
+  "what-is-defi": [
+    "What Is Ethereum",
+    "What Is a Smart Contract",
+    "What Is a Decentralized Exchange",
+    "What Is a Crypto Wallet",
+    "What Are Liquidity Pools",
+  ],
+  "what-is-crypto-trading": [
+    "What Is Technical Analysis",
+    "What Are Support and Resistance",
+    "What Is a Stop-Loss",
+    "What Is Risk Management",
+    "Trading vs Investing",
+  ],
+};
+
+const RELATED_ARTICLE_ALIASES: Record<string, string> = {
+  "how does bitcoin work": "how does bitcoin works",
+};
+
+function normalizeRelatedConcept(title: string) {
+  return title
+    .toLowerCase()
+    .replace(/[?.,!]/g, "")
+    .replace(/^(what is|what are|how does)\s+/, "")
+    .replace(/\ba\s+/g, "")
+    .trim();
+}
+
+export function getRelatedBlogArticles(article: BlogArticleData) {
+  return (RELATED_CONCEPTS_BY_SLUG[article.slug] ?? [])
+    .map((concept) => {
+      const normalizedConcept = normalizeRelatedConcept(concept);
+      const aliasedConcept = RELATED_ARTICLE_ALIASES[normalizedConcept] ?? normalizedConcept;
+
+      return BLOG_ARTICLES.find(
+        (candidate) => normalizeRelatedConcept(candidate.title) === aliasedConcept,
+      );
+    })
+    .filter((related): related is BlogArticleData =>
+      Boolean(related && related.slug !== article.slug),
+    )
+    .slice(0, 3);
+}
+
 export function getBlogArticle(slug: string): BlogArticleData | undefined {
   return BLOG_ARTICLES.find((article) => article.slug === slug);
 }

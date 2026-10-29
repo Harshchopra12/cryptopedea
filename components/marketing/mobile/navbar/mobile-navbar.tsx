@@ -12,6 +12,9 @@ const MOBILE_MENU_LINKS = [
     { label: "Contact Us", href: "/contact" },
 ] as const;
 
+const MOBILE_MENU_LINK_CLASS =
+    "w-full py-1 text-center font-[var(--cp-font-display)] text-[28px] font-bold leading-[1.1] tracking-[-0.84px] text-[#000926] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#000926] focus-visible:ring-offset-2 focus-visible:ring-offset-[#fbfbfb]";
+
 export default function MobileNavbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -128,7 +131,12 @@ export default function MobileNavbar() {
                             focus-visible:ring-offset-[#fbfbfb]
                         "
                     >
-                        <span aria-hidden="true">×</span>
+                        <span
+                            aria-hidden="true"
+                            className="text-[48px] leading-none"
+                        >
+                            ×
+                        </span>
                     </button>
 
                     <nav
@@ -140,22 +148,7 @@ export default function MobileNavbar() {
                                 key={link.href}
                                 href={link.href}
                                 onClick={() => setIsMenuOpen(false)}
-                                className="
-                                    w-full
-                                    py-1
-                                    text-center
-                                    font-[var(--cp-font-display)]
-                                    text-[28px]
-                                    font-bold
-                                    leading-[1.1]
-                                    tracking-[-0.84px]
-                                    text-[#000926]
-                                    focus-visible:outline-none
-                                    focus-visible:ring-2
-                                    focus-visible:ring-[#000926]
-                                    focus-visible:ring-offset-2
-                                    focus-visible:ring-offset-[#fbfbfb]
-                                "
+                                className={MOBILE_MENU_LINK_CLASS}
                             >
                                 {link.label}
                             </Link>
