@@ -1,37 +1,11 @@
+import styles from "./subscription-card.module.css";
+
 export default function SubscriptionCard() {
     return (
         <form
-            className="
-        mobile-subscription-card
-        flex
-        h-[260px]
-        w-full
-        shrink-0
-        flex-col
-        items-start
-        gap-[40px]
-        overflow-hidden
-        border-[5px]
-        border-solid
-        border-black
-        bg-[#44a4fb]
-        px-[30px]
-        py-[40px]
-        shadow-[10px_10px_0_#000000]
-    "
+            className={`mobile-subscription-card ${styles.subscriptionCard}`}
         >
-            <div
-                className="
-                    flex
-                    w-full
-                    min-w-0
-                    self-stretch
-                    shrink-0
-                    flex-col
-                    items-start
-                    gap-[10px]
-                "
-            >
+            <div className={styles.fieldGroup}>
                 <label
                     htmlFor="community-email"
                     className="
@@ -53,46 +27,16 @@ export default function SubscriptionCard() {
                 <input
                     id="community-email"
                     type="email"
-                    className="
-                        h-[50px]
-                        min-w-0
-                        w-[calc(100%_-_20px)]
-                        self-center
-                        border-[3px]
-                        border-solid
-                        border-black
-                        bg-white
-                        px-[10px]
-                        outline-none
-                        shadow-[5px_5px_0_#000000]
-                    "
+                    className={styles.emailInput}
                 />
             </div>
 
             <button
                 type="submit"
-                className="
-                    flex
-                    h-[50px]
-                    w-[99px]
-                    shrink-0
-                    items-center
-                    border-2
-                    border-solid
-                    border-black
-                    bg-white
-                    p-[10px]
-                    text-[24px]
-                    font-normal
-                    leading-[1.25]
-                    tracking-[-0.72px]
-                    text-black
-                    shadow-[5px_5px_0_#000000]
-                "
+                className={styles.submitButton}
                 style={{
                     fontFamily:
                         "var(--cp-font-body), 'Space Grotesk', sans-serif",
-                    marginLeft: "10px",
                 }}
             >
                 Submit

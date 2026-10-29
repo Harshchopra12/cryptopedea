@@ -14,7 +14,8 @@ export default function SocialLinks() {
       {COMMUNITY_SOCIAL_LINKS.map((social) => (
         <SocialButton
           key={social.id}
-          background={social.backgroundColor}
+          href={social.href}
+          ariaLabel={`Visit Cryptopedea on ${social.label}`}
           icon={
             <img
               src={social.icon}

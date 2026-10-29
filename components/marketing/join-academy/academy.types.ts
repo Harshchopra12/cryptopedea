@@ -4,4 +4,5 @@ export interface AcademyCardProps {
   color: string;
   image: string;
   coins: number[];
+  desktop?: boolean;
 }

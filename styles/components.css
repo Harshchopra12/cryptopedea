@@ -45,8 +45,17 @@
   will-change: transform;
 }
 
+.cp-community-cloud-track {
+  display: flex;
+  height: 100%;
+  width: 200%;
+  animation: cp-academy-cloud-scroll 48s linear infinite;
+  will-change: transform;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .cp-academy-cloud-track {
+  .cp-academy-cloud-track,
+  .cp-community-cloud-track {
     animation: none;
   }
 }

@@ -1,7 +1,15 @@
+"use client";
+
+import { useState } from "react";
+import { OFFER_DEFAULT_PANEL_COLOR } from "./offer.constants";
 import FeaturedContent from "./featured-content";
 import FeaturedImage from "./featured-image";
 
 export default function FeaturedCard() {
+  const [backgroundColor, setBackgroundColor] = useState(
+    OFFER_DEFAULT_PANEL_COLOR,
+  );
+
   return (
     <article
       className="
@@ -12,13 +20,16 @@ export default function FeaturedCard() {
     gap-[10px]
     border-[2px]
     border-[#000926]
-    bg-[#FF5C5D]
     shadow-[5px_5px_0_#000926]
   "
+      style={{ backgroundColor }}
     >
       <FeaturedImage />
 
-      <FeaturedContent />
+      <FeaturedContent
+        selectedColor={backgroundColor}
+        onSelectColor={setBackgroundColor}
+      />
     </article>
   );
 }

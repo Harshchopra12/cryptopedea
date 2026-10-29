@@ -13,7 +13,7 @@ export default function HeroTitle() {
         text-[var(--cp-color-primary)]
       "
       style={{
-        fontFamily: "Pixeloid Sans",
+        fontFamily: "var(--cp-font-display)",
       }}
     >
       Cryptopedea

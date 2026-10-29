@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import type { BlogArticleData, BlogParagraph } from "@/content/blogs/articles";
+import { getRelatedBlogArticles, type BlogArticleData, type BlogParagraph } from "@/content/blogs/articles";
 import styles from "./blog-article.module.css";
 
 function Paragraph({ content }: { content: BlogParagraph }) {
@@ -25,6 +25,8 @@ export default function BlogArticleView({
 }: {
   article: BlogArticleData;
 }) {
+  const relatedArticles = getRelatedBlogArticles(article);
+
   return (
     <main className={styles.page}>
       <article className={styles.article}>
@@ -75,17 +77,18 @@ export default function BlogArticleView({
           <section className={styles.related} aria-labelledby="related-concepts">
             <h2 id="related-concepts">Related Concepts</h2>
             <div className={styles.relatedGrid}>
-              {article.relatedConcepts.map((concept) => (
-                <article
+              {relatedArticles.map((relatedArticle, index) => (
+                <Link
                   className={styles.relatedCard}
-                  key={concept.title}
-                  style={{ backgroundColor: concept.color }}
+                  href={`/blogs/${relatedArticle.slug}`}
+                  key={relatedArticle.slug}
+                  style={{ backgroundColor: ["#ed7c30", "#feca04", "#00a64f"][index] }}
                 >
                   <div className={styles.relatedImage}>
-                    <Image src={concept.image} alt={concept.alt} fill sizes="(max-width: 767px) 100vw, 350px" />
+                    <Image src={relatedArticle.hero.src} alt={relatedArticle.hero.alt} fill sizes="(max-width: 767px) 100vw, 350px" />
                   </div>
-                  <h3>{concept.title}</h3>
-                </article>
+                  <h3>{relatedArticle.title}</h3>
+                </Link>
               ))}
             </div>
           </section>

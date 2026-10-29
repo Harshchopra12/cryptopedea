@@ -1,0 +1,69 @@
+.emailCard {
+  box-sizing: border-box;
+  display: flex;
+  width: min(408px, 100%);
+  height: 355px;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+  padding: 40px 30px;
+  border: 5px solid #000;
+  background: #2bbcff;
+  box-shadow: 10px 10px 0 #000;
+}
+
+.emailContent {
+  box-sizing: border-box;
+  display: flex;
+  width: 338px;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+  padding: 10px;
+}
+
+.emailHeading {
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  margin: 0;
+  color: #000926;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.96px;
+}
+
+.infoBox {
+  box-sizing: border-box;
+  display: flex;
+  width: 328px;
+  max-width: 100%;
+  flex-shrink: 0;
+  align-items: flex-start;
+  padding: 10px;
+  border: 2px solid #000;
+  background: #fff;
+  box-shadow: 5px 5px 0 #000;
+}
+
+.infoBox:first-of-type {
+  height: 95px;
+}
+
+.infoBox:last-of-type {
+  height: 70px;
+}
+
+.infoText {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -0.6px;
+}

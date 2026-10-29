@@ -1,44 +1,13 @@
+import styles from "./email-card.module.css";
+
 export default function EmailCard() {
     return (
         <section
-            className="
-        mobile-email-card
-        flex
-        h-[355px]
-        w-full
-        shrink-0
-        flex-col
-        items-start
-        overflow-hidden
-        border-[5px]
-        border-solid
-        border-black
-        bg-[#2bbcff]
-        px-[30px]
-        py-[40px]
-        shadow-[10px_10px_0_#000000]
-    "
+            className={`mobile-email-card ${styles.emailCard}`}
         >
-            <div
-                className="
-                    flex
-                    w-full
-                    flex-col
-                    items-start
-                    gap-[25px]
-                    p-[10px]
-                "
-            >
+            <div className={styles.emailContent}>
                 <h3
-                    className="
-                        m-0
-                        w-full
-                        text-[32px]
-                        font-bold
-                        leading-[1.25]
-                        tracking-[-0.96px]
-                        text-[#000926]
-                    "
+                    className={styles.emailHeading}
                     style={{
                         fontFamily:
                             "var(--cp-font-body), 'Space Grotesk', sans-serif",
@@ -47,30 +16,9 @@ export default function EmailCard() {
                     Email Us
                 </h3>
 
-                <div
-                    className="
-                        flex
-                        w-[calc(100%_-_20px)]
-                        self-center
-                        items-start
-                        border-2
-                        border-solid
-                        border-black
-                        bg-white
-                        p-[10px]
-                        shadow-[5px_5px_0_#000000]
-                    "
-                >
+                <div className={styles.infoBox}>
                     <p
-                        className="
-                            m-0
-                            w-full
-                            text-[20px]
-                            font-normal
-                            leading-[1.25]
-                            tracking-[-0.6px]
-                            text-black
-                        "
+                        className={styles.infoText}
                         style={{
                             fontFamily:
                                 "var(--cp-font-body), 'Space Grotesk', sans-serif",
@@ -81,30 +29,9 @@ export default function EmailCard() {
                     </p>
                 </div>
 
-                <div
-                    className="
-                        flex
-                        w-[calc(100%_-_20px)]
-                        self-center
-                        items-start
-                        border-2
-                        border-solid
-                        border-black
-                        bg-white
-                        p-[10px]
-                        shadow-[5px_5px_0_#000000]
-                    "
-                >
+                <div className={styles.infoBox}>
                     <p
-                        className="
-                            m-0
-                            w-full
-                            text-[20px]
-                            font-normal
-                            leading-[1.25]
-                            tracking-[-0.6px]
-                            text-black
-                        "
+                        className={styles.infoText}
                         style={{
                             fontFamily:
                                 "var(--cp-font-body), 'Space Grotesk', sans-serif",

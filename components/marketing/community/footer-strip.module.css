@@ -1,0 +1,21 @@
+.glossaryLink {
+  display: inline-block;
+  margin-left: 3px;
+  padding: 1px 4px;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  color: inherit;
+  line-height: 1.05;
+  text-decoration: none;
+  transition: background-color 120ms ease, color 120ms ease;
+}
+
+.glossaryLink:hover {
+  background: #421ad3;
+  color: #abef06;
+}
+
+.glossaryLink:focus-visible {
+  outline: 2px solid #000926;
+  outline-offset: 2px;
+}

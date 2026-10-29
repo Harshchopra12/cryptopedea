@@ -3,7 +3,6 @@ import MobileAcademyCarousel from "./academy-carousel";
 import BottomNav from "./bottom-nav";
 import Community from "./community/community";
 import MobileHero from "./hero";
-import MobileWhatWeOffer from "./what-we-offer";
 
 export default function MobileHome() {
     return (
@@ -16,7 +15,6 @@ export default function MobileHome() {
                     <MobileHero />
                     <ArrowNavigation />
                     <BottomNav />
-                    <MobileWhatWeOffer />
                     <MobileAcademyCarousel />
                     <Community />
                 </div>

@@ -11,27 +11,30 @@ export default function InteractiveLessons() {
                 overflow-hidden
                 border-2
                 border-[#000926]
+                bg-[#FBFBFB]
+                p-[10px]
                 shadow-[4px_4px_0_#000000]
             "
         >
-            <Image
-                src="/hero/interactive-lessons.png"
-                alt="Interactive crypto lessons"
-                fill
-                className="object-cover"
-                priority
+            <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                src="/videos/interactive-lessons-mobile.mp4"
+                aria-label="Interactive crypto lessons"
+                className="block h-[291px] w-[291px] object-contain"
             />
 
             <div
                 className="
                     absolute
-                    inset-x-0
-                    bottom-0
+                    inset-x-[10px]
+                    bottom-[10px]
                     flex
                     flex-col
                     items-start
                     gap-[10px]
-                    p-[10px]
                 "
             >
                 <p
@@ -41,14 +44,14 @@ export default function InteractiveLessons() {
                         font-bold
                         leading-[1.08]
                         tracking-[-0.84px]
-                        text-[#fbfbfb]
+                        text-[#000000]
                     "
                     style={{
                         fontFamily:
                             "var(--cp-font-body), 'Space Grotesk', sans-serif",
                     }}
                 >
-                    Interactive Lesions
+                    Interactive Lessons
                 </p>
 
                 <Image
